@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci8uj3ycs1kd8"]
+
+[ext_resource type="Script" uid="uid://7xwjkay0sg3m" path="res://addons/dialogic/Modules/Background/node_background_holder.gd" id="1_v8mo2"]
+[ext_resource type="Texture2D" uid="uid://c1ybhasq575ce" path="res://Assets/Items/listahan.png" id="2_rgffq"]
+
+[sub_resource type="GDScript" id="GDScript_0hi6v"]
+script/source = "@tool
+extends DialogicLayoutLayer
+
+@onready var image = $ItemTexture
+
+func _ready():
+	# Connect Dialogic signal
+	image.texture = null
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(argument: String):
+	match argument:
+		\"tindahan\":
+			image.texture = load(\"res://Assets/Items/listahan.png\")
+		\"null\":
+			image.texture = null
+"
+
+[node name="Foreground" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_0hi6v")
+
+[node name="DialogicNode_BackgroundHolder" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_v8mo2")
+
+[node name="ItemTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rgffq")
+expand_mode = 5

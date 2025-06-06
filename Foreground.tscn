@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1mjxskpy84wo"]
+
+[ext_resource type="Script" uid="uid://7xwjkay0sg3m" path="res://addons/dialogic/Modules/Background/node_background_holder.gd" id="1_mgvew"]
+
+[sub_resource type="GDScript" id="GDScript_0hi6v"]
+script/source = "@tool
+extends DialogicLayoutLayer
+
+@onready var image = $TextureRect
+
+func _ready():
+	# Connect Dialogic signal
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(argument: String):
+	match argument:
+		\"tindahan\":
+			image.texture = load(\"res://Assets/Backgrounds/tindahan.png\")
+		\"null\":
+			image.texture = null
+"
+
+[node name="Foreground" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_0hi6v")
+
+[node name="DialogicNode_BackgroundHolder" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_mgvew")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5

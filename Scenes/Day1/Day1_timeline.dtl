@@ -1,0 +1,8 @@
+[signal arg="tindahan"]
+[background arg="res://Assets/Backgrounds/bg_phd.jpg" fade="3.0" transition="Simple Fade"]
+join Tom_Boyako center [animation="Fade In"]
+if {hate} == 1.0:
+	Tom_Boyako: PABILI NGA PO DUREX PULA
+else:
+	Tom_Boyako: PABILI NGA BITCH
+[wait time="5.0" hide_text="false"]
