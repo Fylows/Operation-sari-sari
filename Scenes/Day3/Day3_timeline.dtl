@@ -1,2 +1,44 @@
 [style name="main_style"]
 [signal arg="start_day"]
+join Tom_Boyako center
+Tom_Boyako:  Hi Mari! Just checking in on the progress before you open shop!
+Ah Tom, what brings you here today?
+Tom_Boyako: Just here to make a small announcement...
+Tom_Boyako: I’m giving you permission to arrest any suspicious figures.
+Wait… Arrest?!
+Tom_Boyako: Yes, that is correct.
+Tom_Boyako: Anyone who you find suspicious coming up to your shop, I give you full power to detain, got it?
+Wait this is all so sudden I-
+Tom_Boyako: I know it is, but trust me, this is for the best.
+Tom_Boyako: Just do your best, ok? I trust your decisions.
+Tom_Boyako: For the sake of the town.
+leave Tom_Boyako
+label Time passes (evening)
+join Koopa center
+Koopa: Hello! Kamusta ka, Mari?
+What are you doing here?
+Koopa: Whoa, calm down. Hinatid ko lang si boss Tom, but just because she left doesn’t mean I have to. 
+Koopa: Thought I'd stop by to have a chat with a colleague!
+...
+Koopa: You sure are taking your time.
+What can I do? The locals are shut up tight.
+Koopa: Akala ko ba magaling ka? Where’s that bravado?
+I didn’t say anything like that. And besides, the closest I’ve gotten is–
+Koopa: Save it for later. I think we have a lead.
+?
+ Guess who I saw lurking around last night?
+join  center
+update Koopa
+Good evening, boss
+Jan:  M… Ma…
+Marlboro na naman ba?
+Jan: Mmm…
+Koopa: Ahem. 
+Koopa: I think I must take my leave, I’ll see you soon, Mari.
+Jan: And Jan, don’t drink too much please, I don’t want to keep you in custody again like last time.
+leave Koopa
+Jan: Ahem, boss, can I ask…
+<Empty Text Event>
+[signal arg="end_day"]
+set {day} += 1.0
+set {d3_e} = true

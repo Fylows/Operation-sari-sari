@@ -1,2 +1,5 @@
 [style name="main_style"]
 [signal arg="start_day"]
+[signal arg="end_day"]
+set {day} += 1.0
+set {d5_e} = true

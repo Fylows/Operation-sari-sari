@@ -3,10 +3,12 @@ if {day} == 1.0:
 	Ugh, last night is still eating away at me, but I must not lose sight of my mission, everyone is relying on me.
 	[end_timeline]
 elif {day} == 2.0:
-	Its day 2
+	Another day huh… hopefully today I find more leads.
 	[end_timeline]
 elif {day} == 3.0:
-	Tis day 3
+	one more day…
+	[b] KNOCK KNOCK KNOCK [b]
+	Tom_Boyako: Hey, are you awake?
 	[end_timeline]
 elif {day} == 4.0:
 	DAY 4 BITCH

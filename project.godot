@@ -25,6 +25,8 @@ directories/dch_directory={
 "Ace": "res://Scenes/Characters/Ace/Ace.dch",
 "Children": "res://Scenes/Characters/Children/Children.dch",
 "Deon Cey": "res://Scenes/Characters/Deon/Deon Cey.dch",
+"Jan": "res://Scenes/Characters/Jiro/Jan.dch",
+"Koopa": "res://Scenes/Characters/Koopa/Koopa.dch",
 "TamBai": "res://Scenes/Characters/Tam/TamBai.dch",
 "Tom_Boyako": "res://Scenes/Characters/Tom Boyako/Tom_Boyako.dch"
 }
@@ -50,8 +52,13 @@ variables={
 "d3_e": false,
 "d4_e": false,
 "d5_e": false,
-"day": 0,
-"qte": false
+"day": 2,
+"deon_sus": "",
+"jan_sus": 0,
+"koopa_sus": "",
+"qte": false,
+"tam_sus": 0,
+"tom_sus": 0
 }
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"

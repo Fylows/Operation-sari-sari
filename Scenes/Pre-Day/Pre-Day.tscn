@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://bojim1cxoxcip"]
 
 [ext_resource type="Script" uid="uid://cb1ov43it3fvx" path="res://Scenes/Pre-Day/pre_day.gd" id="1_5kk28"]
-[ext_resource type="Texture2D" uid="uid://chu6b7xfche6v" path="res://Assets/Backgrounds/tindahan.png" id="2_sg8gv"]
+[ext_resource type="Texture2D" uid="uid://br5lga8ug63to" path="res://Assets/Backgrounds/Tindahan_CLOSED_noValiant.png" id="2_kyykf"]
 [ext_resource type="Texture2D" uid="uid://c1ybhasq575ce" path="res://Assets/Items/listahan.png" id="3_wendk"]
 [ext_resource type="Script" uid="uid://dj0wbu1wuy7uq" path="res://Scenes/Pre-Day/listahan.gd" id="4_npyhy"]
 [ext_resource type="Script" uid="uid://dh725w266r5ba" path="res://Scenes/Pre-Day/day_start.gd" id="5_8xfpq"]
@@ -61,7 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sg8gv")
+texture = ExtResource("2_kyykf")
 expand_mode = 5
 metadata/_edit_use_anchors_ = true
 
