@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci8uj3ycs1kd8"]
+[gd_scene load_steps=3 format=3 uid="uid://ci8uj3ycs1kd8"]
 
 [ext_resource type="Script" uid="uid://7xwjkay0sg3m" path="res://addons/dialogic/Modules/Background/node_background_holder.gd" id="1_v8mo2"]
-[ext_resource type="Texture2D" uid="uid://c1ybhasq575ce" path="res://Assets/Items/listahan.png" id="2_rgffq"]
 
 [sub_resource type="GDScript" id="GDScript_0hi6v"]
 script/source = "@tool
@@ -49,5 +48,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_rgffq")
 expand_mode = 5

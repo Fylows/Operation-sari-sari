@@ -1,16 +1,27 @@
-[background fade="0.0"]
-I know you said it'll take a while, but Mari, we're running out of time.
-join Tom_Boyako center [animation="Fade In Up"]
-You know I cant keep waiting for your results.
-Im sorry but you need to speed things up.
-I put you in here to uncover a nationwide conspiracy, not to make chika with the locals.
-I expect to hear results by the end of this week.
-Are we clear?
-- Yes
-	Good.
-- No
-	You're unbearable.
-	set {hate} += 1.0
-leave Tom_Boyako [animation="Fade Out" wait="true"]
+[style name="main_style"]
+If I were to have any reason to work, it would be to help my community. 
+Helping out those in need, in times of need, nothing brings me more joy than that.
+Seeing the smiles on people’s faces, and being able to ease some of their burdens, it makes me whole.
+I may be humble, and my work may be humble, but I believe even a little help can go a long way.
+Humble, huh...
+yeah, well I guess my sari-sari store was humble, it was humble until everything changed, that very week.
+[background arg="res://Assets/Backgrounds/temp_base_bg.jpg" fade="1.5"]
+join Tom_Boyako center [animation="Slide In Left" z_index="1"]
+Tom_Boyako:  Interrogate the people, find the culprit, save the town, that is your mission.
+ Excuse me?
+Tom_Boyako:  One of your townspeople has just been murdered, and you seem unaware? I’m having second thoughts choosing you now.
+Murder, unaware? Wait a second just what is all this about?
+Tom_Boyako: Ace’s father? he’s was murdered last week.
+…
+Tom_Boyako: You are familiar with Ace aren’t you? I did choose you because of that exact reason.
+Tom_Boyako: If there’s anyone familiar with all the people in this town, it would be you.
+ But this is just so sudden, I’m not sure if I’m followi-
+Tom_Boyako: Justice doesn’t wait Mari. The more we let this linger the more blood we may find being spilled.
+Tom_Boyako: Tomorrow, when you open your store, there’s one thing I want you to do.
+ …and that is?
+Tom_Boyako: Interrogate. Ask the people what they know, look for as much leads as you can.
+Tom_Boyako: You know these people better than I do, than anyone does. If there’s anyone to notice something wrong, it will be you.
+Tom_Boyako: Mari Tesoro, save this town.\
+
 set {day} += 1.0
-[signal arg="time0_end"]
+[end_timeline]
