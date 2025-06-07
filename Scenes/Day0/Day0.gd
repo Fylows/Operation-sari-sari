@@ -5,7 +5,7 @@ func _ready():
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 
 	# Starting Scene
-	Dialogic.start("Day0_TB")
+	Dialogic.start("Day0_timeline")
 
 
 # Transitioning to next scene

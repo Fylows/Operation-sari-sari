@@ -1,15 +1,16 @@
 [background fade="0.0"]
-Tom_Boyako: I know you said it'll take a while, but Mari, we're running out of time.
+I know you said it'll take a while, but Mari, we're running out of time.
 join Tom_Boyako center [animation="Fade In Up"]
-Tom_Boyako: You know I cant keep waiting for your results.
-Tom_Boyako: Im sorry but you need to speed things up.
-Tom_Boyako: I put you in here to uncover a nationwide conspiracy, not to make chika with the locals.
-Tom_Boyako: I expect to hear results by the end of this week.
-Tom_Boyako: Are we clear?
+You know I cant keep waiting for your results.
+Im sorry but you need to speed things up.
+I put you in here to uncover a nationwide conspiracy, not to make chika with the locals.
+I expect to hear results by the end of this week.
+Are we clear?
 - Yes
-	Tom_Boyako: Good.
+	Good.
 - No
-	Tom_Boyako: You're unbearable.
+	You're unbearable.
 	set {hate} += 1.0
 leave Tom_Boyako [animation="Fade Out" wait="true"]
+set {day} += 1.0
 [signal arg="time0_end"]

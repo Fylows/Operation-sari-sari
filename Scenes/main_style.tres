@@ -63,7 +63,7 @@ overrides = {}
 
 [resource]
 script = ExtResource("10_vtoah")
-name = "Day1_style"
+name = "main_style"
 layer_list = Array[String](["10", "11", "18", "12", "13", "14", "15", "16", "17"])
 layer_info = {
 "": SubResource("Resource_8lypf"),
