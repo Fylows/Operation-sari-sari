@@ -1,0 +1,136 @@
+[style name="main_style"]
+[signal arg="tindahan"]
+[background arg="bg_phd.jpg" fade="3.0" transition="Simple Fade"]
+join Jan center
+Jan: Heh heh…
+?!
+Uhh.. can I help you?
+Jan: Marlboro..
+Alright, sure.. thing?
+[i]Wow. First thing in the morning and this guy already wants a smoke huh?[/i]
+[i]Mr. Satabi has always been a weird one, but to see him this early in the morning is certainly strange.[/i]
+[i] I try to avoid interacting with him as much as I can, but with this situation I’m in, that may no longer be a possibility.[/i]
+[i]There’s no telling who may end up being an important character in this scenario.[/i]
+[i]Anyway I should probably hand these over to him.[/i]
+Here’s your cigarettes..
+leave Jan
+join TamBai center
+TamBai: Hoy Mari! I thought you quit smoking long ago?
+It’s not for me, idiot. Anyway, how long have you been here?
+TamBai: Long enough to see you stare down that box of Marlboro like you wanna make out with it.
+Like. I. Said. It’s not for me.
+I see you’ve got Ace with you today again. Have you two always been this close?
+TamBai: Huh? Yeah of course.. Why do you ask?
+TamBai: Isn’t that right, Ace?
+leave TamBai
+join Ace center
+Ace: …yeah sure.
+Oh! Feel like talking today Ace? Feeling better perhaps?
+[i]Alright this is good they seem willing to talk even if only a little bit.[/i]
+[i]Now if I can just get some info-[/i]
+leave Ace
+join Jan center
+Jan: Ace huh… heh heh..
+Jan: Ha..
+leave Jan
+join TamBai center
+TamBai: Mari! Two cokes again please!
+Wait! Tam, I’ll get you in a second.
+Mr. Satabi what were you saying again.
+leave TamBai
+join Jan center
+Jan: no one helped..
+Jan: haha..
+Jan: the blood…
+Jan: father…
+I’m gonna need you to speak more clearly.
+leave Jan
+join TamBai center
+TamBai: Mari, our Cokes please.
+Tam, hold on.
+leave TamBai
+join Jan center
+Jan: Ace.. tried to-
+leave Jan
+join TamBai center
+TamBai: Mari. Give us the drinks. Now.
+?!
+…
+One second..
+[i]What is up with Tam lately?[/i]
+[i]He seems to be really on edge about everything, just what on earth does he know?[/i]
+TamBai: …How many….. to tell you…..
+[i]Huh?[/i]
+TamBai: None…. Business… get involved…
+[i]I can’t make out what he’s saying..[/i]
+TamBai: …. Just leave.
+leave TamBai
+join Jan center
+Jan: heh… suit yourself.. haha..
+Alright! Tam, I’m back with your drinks. What were you discussing with Mr. Satabi?
+leave Jan
+join TamBai center
+TamBai: Nothing to worry about, just telling him off for being a bum as usual. Palagi ko nalang ‘yan nakikita sa labas, pagala-gala kahit gabi na.
+He’s always out?
+TamBai: Oo, kahit noon pa.
+TamBai: It’s a pain in the ass hanging around here with his stinky face in the area.
+[i]Maybe he might have seen something…[/i]
+TamBai: Anyway, the computer shop opens late today, so is it cool if me and Ace hang out here for a while?
+Stay as long as you like.
+TamBai: Thanks, Mari. I can always count on you!
+TamBai: Wait, hold on. Is that Junjun I see?
+TamBai: Psst! Jun!!!
+leave TamBai
+join Jun center
+Jun: Hello po…
+Hi Jun! What brings you here today?
+Jun: Sinigang mix please, for lunch.
+Ah, you guys are cooking Sinigang? Sure thing! Let me get that for you.
+leave Jun
+join TamBai center
+TamBai: Hey, Jun! Long time no see! I missed yo- IS THAT A CELESTIAL SHOCKED BEANSTALK?!
+TamBai: AND YOU HAVE A MOON BLOSSOM TOO?!
+TamBai: Just how lucky are you?!
+leave TamBai
+join Jun center
+Jun: Oh, I just play this game a lot, it’s a lot easier to play on my Ipad.
+Jun: Anyway, Hi Kuya Tam, Hi Ace..
+leave Jun
+join TamBai center
+TamBai: What’s up Jun!
+leave TamBai
+join Ace center
+Ace: Hello Jun..
+Here Jun, your sinigang mix.
+leave Ace
+join Jun center
+Jun: Thank you po!
+Oh yeah Jun one more thing before you go.
+There seems to be a strange man walking around late at night, so be sure not to stay outdoors playing too late!
+leave Jun
+join Ace center
+Ace: ?!
+leave Ace
+join Jun center
+Jun: Oh it’s ok, I only play grow a garden anyway.
+Jun: I wouldn’t want to end up like Ace’s father…
+leave Jun
+join Ace center
+Ace: !!!
+leave Ace
+join TamBai center
+TamBai: Jun! Anong oras na, your game–
+leave TamBai
+join Jun center
+Jun: Kuya Tam, you promised pa nga sa dad ni Ace noon na–
+leave Jun
+join TamBai center
+TamBai: Ok! I think that’s enough! Jun, why don’t you go home already?
+TamBai: I can’t let you overtake my garden, I’m going to get that beanstalk today just you wait!
+TamBai: Anyway, thank you, Mari! But we gotta go.
+TamBai: And if I were you, I’d stop asking questions, because someone might get hurt..
+leave TamBai
+Huh?
+[i]What was that?[/i]
+set {day} += 1.0
+[end_timeline]
