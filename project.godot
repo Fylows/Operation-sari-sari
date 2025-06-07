@@ -36,7 +36,7 @@ directories/dtl_directory={
 layout/style_list=["res://Scenes/main_style.tres"]
 layout/default_style="res://Scenes/Day0/Day_0_Style.tres"
 variables={
-"day": 0,
+"day": 1,
 "qte": false
 }
 glossary/default_case_sensitive=true

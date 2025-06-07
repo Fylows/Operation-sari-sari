@@ -35,6 +35,7 @@ Huh? Oh yeah what can I get you all?
 Children: Kendi nga po– sampung piso.
 Sure thing! Let me just go get some real quick.
 label qte (qte)
+[wait time="0.2"]
 [signal arg="qte1_d1"]
 [wait time="5.0"]
 if {qte} == false:
@@ -51,6 +52,7 @@ Deon?! When did you get here? And don’t sneak up on me so suddenly!
 God is it really that obvious? Oh well I guess I’m never hiding anything from you Deon.
 "Deon Cey": Girl I’ve got all the information in the world right here in my head, damn right you’re hiding nothing.
 "Deon Cey": I’m still waiting on that candy by the way.
+[wait time="0.2"]
 [signal arg="qte2_d1"]
 [wait time="3.0"]
 if {qte} == false:
