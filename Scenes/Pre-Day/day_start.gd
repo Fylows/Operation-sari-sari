@@ -8,7 +8,6 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	if end == 1:
-		var day = "Day"+str(int(Dialogic.VAR.day))
 		Dialogic.VAR.d1_e = false
 		Dialogic.VAR.d2_e = false
 		Dialogic.VAR.d3_e = false
@@ -17,8 +16,8 @@ func _on_pressed() -> void:
 		end = 0
 		get_tree().change_scene_to_file("res://Scenes/"+day+"/"+day+".tscn")
 	else:
-		day = "Day"+str(int(Dialogic.VAR.day))+"_timeline"
-		Dialogic.start(day)
+		day = str(int(Dialogic.VAR.day))
+		Dialogic.start("Day"+day+"_timeline")
 		$"..".visible = false
 	
 	
