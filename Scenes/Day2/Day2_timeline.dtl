@@ -2,7 +2,6 @@
 [signal arg="start_day"]
 [background arg="bg_phd.jpg" fade="3.0" transition="Simple Fade"]
 join  center
-jump qte
 Heh heh…
 ?!
 Uhh.. can I help you?

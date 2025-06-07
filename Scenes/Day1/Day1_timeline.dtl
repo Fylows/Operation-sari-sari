@@ -3,7 +3,6 @@
 [background arg="bg_phd.jpg" fade="3.0" transition="Simple Fade"]
 join TamBai left [animation="Slide In Left"]
 join Ace right [animation="Slide In Left" length="4.0"]
-jump qte
 TamBai: Yo mari! Can I get a- huh? Why the long face? Get dumped again?
 Ah, it’s nothing. don’t worry about it, anyway what can I get you?
 TamBai: Huh weird, you usually go all feral when I tease you about your exes, anyway it doesn’t matter.
