@@ -1,9 +1,12 @@
 extends Area2D
-@onready var grp = $".."
+@onready var label = $"../Label"
+@onready var label_guide = $"../WTD"
+@onready var area = $"."
 
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action_pressed("enter"):
-		print("hello")
-		Dialogic.VAR.qte = true
-		grp.visible = false
-		Dialogic.handle_next_event()
+func _on_mouse_entered() -> void:
+	print("hello")
+	Dialogic.VAR.qte = true
+	label.visible = false
+	label_guide.visible = false
+	area.visible = false
+	Dialogic.handle_next_event()

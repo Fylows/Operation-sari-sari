@@ -2,7 +2,6 @@
 [signal arg="tindahan"]
 [background arg="bg_phd.jpg" fade="3.0" transition="Simple Fade"]
 join Tom_Boyako center [animation="Fade In"]
-jump qte
 TamBai: Yo mari! Can I get a- huh? Why the long face? Get dumped again?
 Ah, it’s nothing. don’t worry about it, anyway what can I get you?
 TamBai: Huh weird, you usually go all feral when I tease you about your exes, anyway it doesn’t matter.
@@ -36,12 +35,12 @@ Huh? Oh yeah what can I get you all?
 Children: Kendi nga po– sampung piso.
 Sure thing! Let me just go get some real quick.
 label qte (qte)
-[signal arg="qte_start"]
+[signal arg="qte1_d1"]
 [wait time="5.0"]
 if {qte} == false:
 	Children: Wag na po pala, tagal niyo teh!
 else:
-	Children: YAYYY 10Q PO
+	Children: YAYYY TENKU PO
 set {qte} = false
 "Deon Cey": May I have 10 pieces of candy too?
 Alright hold on, Just have to- HUH?
@@ -52,8 +51,8 @@ Deon?! When did you get here? And don’t sneak up on me so suddenly!
 God is it really that obvious? Oh well I guess I’m never hiding anything from you Deon.
 "Deon Cey": Girl I’ve got all the information in the world right here in my head, damn right you’re hiding nothing.
 "Deon Cey": I’m still waiting on that candy by the way.
-[wait time="5.0"]
-[signal arg="qte_start"]
+[signal arg="qte2_d1"]
+[wait time="3.0"]
 if {qte} == false:
 	"Deon Cey": Never mind that, you’re rather sluggish,  is something bothering you?
 else:

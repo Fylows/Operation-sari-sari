@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://djn840s4gnc1x"]
+[gd_scene load_steps=7 format=3 uid="uid://djn840s4gnc1x"]
 
 [ext_resource type="Script" uid="uid://dvlx5ai3qhwqd" path="res://QTEs/QTE_Timer.gd" id="1_5bgmw"]
+[ext_resource type="Script" uid="uid://c0iojk6eh1s6b" path="res://QTEs/connector.gd" id="1_22qm2"]
 [ext_resource type="Script" uid="uid://brpemajcen3an" path="res://QTEs/Day1_QTE.gd" id="2_4vc0q"]
 [ext_resource type="Texture2D" uid="uid://chu6b7xfche6v" path="res://Assets/Backgrounds/tindahan.png" id="3_6sjy2"]
 [ext_resource type="Texture2D" uid="uid://c1ybhasq575ce" path="res://Assets/Items/listahan.png" id="4_22qm2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvlrd"]
-size = Vector2(376, 186)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22qm2"]
+size = Vector2(377, 185)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_22qm2")
 
 [node name="Tindahan" type="CanvasLayer" parent="."]
 layer = -1
@@ -40,11 +42,11 @@ texture = ExtResource("4_22qm2")
 expand_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="QTE Day 1" type="CanvasGroup" parent="."]
+[node name="QTE Day 1" type="CanvasLayer" parent="."]
+layer = 3
 script = ExtResource("1_5bgmw")
 
 [node name="Timer" type="Timer" parent="QTE Day 1"]
-wait_time = 5.0
 
 [node name="WTD" type="Label" parent="QTE Day 1"]
 visible = false
@@ -67,13 +69,12 @@ offset_bottom = 638.0
 
 [node name="Area2D" type="Area2D" parent="QTE Day 1"]
 visible = false
+position = Vector2(947, 470)
 script = ExtResource("2_4vc0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="QTE Day 1/Area2D"]
-top_level = true
-z_index = 2
-position = Vector2(1720, 829)
-shape = SubResource("RectangleShape2D_wvlrd")
-debug_color = Color(0, 0, 0.607843, 0.458824)
+position = Vector2(774.5, 358.5)
+shape = SubResource("RectangleShape2D_22qm2")
 
 [connection signal="input_event" from="QTE Day 1/Area2D" to="QTE Day 1/Area2D" method="_on_input_event"]
+[connection signal="mouse_entered" from="QTE Day 1/Area2D" to="QTE Day 1/Area2D" method="_on_mouse_entered"]

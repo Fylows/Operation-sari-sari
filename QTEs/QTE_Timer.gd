@@ -1,20 +1,26 @@
-@tool
-extends DialogicLayoutLayer
+extends CanvasLayer
 
-@onready var label = $Label
-@onready var label_guide = $WTD
-@onready var timer = $Timer
-@onready var area = $Area2D
+@onready var timer = $"Timer"
+@onready var label = $"Label"
+@onready var label_guide = $"WTD"
+@onready var area = $"Area2D"
 
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	timer.timeout.connect(_on_timer_timeout)
 
 func _on_dialogic_signal(arg: String):
-	if arg == "qte_start":
+	if arg == "qte1_d1":
 		label.visible = true
 		label_guide.visible = true		
 		area.visible = true
+		timer.wait_time = 5.0
+		timer.start()
+		
+	if arg == "qte2_d1":
+		label.visible = true
+		area.visible = true
+		timer.wait_time = 3.0
 		timer.start()
 
 func _on_timer_timeout():
