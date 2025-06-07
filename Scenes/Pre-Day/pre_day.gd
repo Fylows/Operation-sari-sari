@@ -5,7 +5,5 @@ extends DialogicBackground
 
 func _ready():
 	notes.visible = false
-	Dialogic.timeline_ended.connect(_on_timeline_ended)
-
-func _on_timeline_ended():
-	pass
+	Dialogic.start("preday_timeline")
+	

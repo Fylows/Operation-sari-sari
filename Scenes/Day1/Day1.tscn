@@ -5,4 +5,3 @@
 [node name="Day1" type="Node2D"]
 
 [node name="Pre-Day1" parent="." instance=ExtResource("1_a7kps")]
-visible = false

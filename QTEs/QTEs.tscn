@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://djn840s4gnc1x"]
+
+[ext_resource type="Script" uid="uid://dvlx5ai3qhwqd" path="res://QTEs/QTE_Timer.gd" id="1_5bgmw"]
+[ext_resource type="Script" uid="uid://brpemajcen3an" path="res://QTEs/Day1_QTE.gd" id="2_4vc0q"]
+[ext_resource type="Texture2D" uid="uid://chu6b7xfche6v" path="res://Assets/Backgrounds/tindahan.png" id="3_6sjy2"]
+[ext_resource type="Texture2D" uid="uid://c1ybhasq575ce" path="res://Assets/Items/listahan.png" id="4_22qm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvlrd"]
+size = Vector2(376, 186)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tindahan" type="CanvasLayer" parent="."]
+layer = -1
+visible = false
+
+[node name="Tindahan" type="TextureRect" parent="Tindahan"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_6sjy2")
+expand_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Listahan" type="TextureRect" parent="Tindahan"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_22qm2")
+expand_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="QTE Day 1" type="CanvasGroup" parent="."]
+script = ExtResource("1_5bgmw")
+
+[node name="Timer" type="Timer" parent="QTE Day 1"]
+wait_time = 5.0
+
+[node name="WTD" type="Label" parent="QTE Day 1"]
+visible = false
+offset_left = 1483.0
+offset_top = 582.0
+offset_right = 1677.0
+offset_bottom = 614.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Click the candy!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="QTE Day 1"]
+visible = false
+offset_left = 1499.0
+offset_top = 615.0
+offset_right = 1539.0
+offset_bottom = 638.0
+
+[node name="Area2D" type="Area2D" parent="QTE Day 1"]
+visible = false
+script = ExtResource("2_4vc0q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QTE Day 1/Area2D"]
+top_level = true
+z_index = 2
+position = Vector2(1720, 829)
+shape = SubResource("RectangleShape2D_wvlrd")
+debug_color = Color(0, 0, 0.607843, 0.458824)
+
+[connection signal="input_event" from="QTE Day 1/Area2D" to="QTE Day 1/Area2D" method="_on_input_event"]

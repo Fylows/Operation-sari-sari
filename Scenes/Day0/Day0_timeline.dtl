@@ -21,6 +21,6 @@ Tom_Boyako: Tomorrow, when you open your store, there’s one thing I want you t
 …and that is?
 Tom_Boyako: Interrogate. Ask the people what they know, look for as much leads as you can.
 Tom_Boyako: You know these people better than I do, than anyone does. If there’s anyone to notice something wrong, it will be you.
-Tom_Boyako: Mari Tesoro, save this town.\
+Tom_Boyako: Mari Tesoro, save this town.
 set {day} += 1.0
 [end_timeline]

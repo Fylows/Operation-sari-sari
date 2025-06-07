@@ -2,8 +2,84 @@
 [signal arg="tindahan"]
 [background arg="bg_phd.jpg" fade="3.0" transition="Simple Fade"]
 join Tom_Boyako center [animation="Fade In"]
-if {hate} == 1.0:
-	Tom_Boyako: PABILI NGA PO DUREX PULA
+jump qte
+TamBai: Yo mari! Can I get a- huh? Why the long face? Get dumped again?
+Ah, it’s nothing. don’t worry about it, anyway what can I get you?
+TamBai: Huh weird, you usually go all feral when I tease you about your exes, anyway it doesn’t matter.
+TamBai: Can I get two cokes please! One for me and one for Ace over here.
+Ace!?
+[i]Oh crap, this is bad. I’m totally unprepared for this, first thing in the morning and they’re already here.[/i]
+TamBai: Oi Mari, you sure nothing’s going on? You seem really out of it right now.
+Tsk, like I said, it’s nothing. Just quit asking already unless you want a slipper flying your direction.
+TamBai: Now THAT’S the Mari I know!
+UGH, I really hope you’re ready to be turned into a tumbang preso can!
+Anyway, Ace… is there anything more you’d like? If anything, you’re the one that seems down the dumps.
+Ace: ...
+You don’t usually get a Coke, so I have no clue what Tam is thinking, getting you one of those…
+Ace: ...
+Come to think about it, you never really drop by this early. What changed?
+Ace: ...
+Hmm. Not in the talking mood today, are we? Well if anything happened, you know it’s safe to tell me-
+TamBai: Oh woah woah look at the time! The computer shop is gonna open soon!
+Wait Tam I was jus-
+TamBai: We gotta get in there first don’t we Ace! If I miss the beanstalk seeds in stock I’m gonna lose it!
+TamBai: Anyway Mari thanks for the drinks, gotta bounce!
+[background fade="0.0"]
+...
+[i]What is up with that kid today?[/i]
+[i]Calling me strange when he’s acting even stranger.[/i]
+[i]Everytime he stops by the store I have to prepare to listen to his shenanigans for at least 30 minutes, and now he suddenly darts off?[/i]
+[i]Were him and Ace even always that close?[/i]
+[i]It almost feels as if-[/i]
+Children: Pabili po!
+Huh? Oh yeah what can I get you all?
+Children: Kendi nga po– sampung piso.
+Sure thing! Let me just go get some real quick.
+label qte (qte)
+[signal arg="qte_start"]
+[wait time="5.0"]
+if {qte} == false:
+	Children: Wag na po pala, tagal niyo teh!
 else:
-	Tom_Boyako: PABILI NGA BITCH
-[wait time="5.0" hide_text="false"]
+	Children: YAYYY 10Q PO
+set {qte} = false
+"Deon Cey": May I have 10 pieces of candy too?
+Alright hold on, Just have to- HUH?
+"Deon Cey": Good morning to you too Mari.
+Deon?! When did you get here? And don’t sneak up on me so suddenly!
+"Deon Cey": I was just walking around and happened to stop by when I saw you.
+"Deon Cey": You seemed somehow more exhausted than usual so I wanted to see what was up.
+God is it really that obvious? Oh well I guess I’m never hiding anything from you Deon.
+"Deon Cey": Girl I’ve got all the information in the world right here in my head, damn right you’re hiding nothing.
+"Deon Cey": I’m still waiting on that candy by the way.
+[wait time="5.0"]
+[signal arg="qte_start"]
+if {qte} == false:
+	"Deon Cey": Never mind that, you’re rather sluggish,  is something bothering you?
+else:
+	"Deon Cey": Thanks.
+set {qte} = false
+Anyway there’s something I wanted to ask you.
+"Deon Cey": Oh my, and what would that be?
+Have you noticed anything fishy going on in town? Doesn’t matter what, as long as something has caught your eye.
+As someone who seems to know the ins and outs of the town, surely if something was off you’d notice it right?
+"Deon Cey": I see, so that’s what’s been bugging you.
+Huh?
+"Deon Cey": Anyhow, there’s been a suspicious man walking around at night lately, if that’s what you count as fishy.
+"Deon Cey": He walks around very late at night, so it’s very hard to make out any features in the darkness.
+"Deon Cey": But just the fact that I seem to have no clues on who this person may be is enough to put me on alert.
+...
+Could this perhaps be related to the murder?
+Damn I’d like to ask more, but this seems like a touchy subject, maybe I shouldn’t give away too much informa-
+It’s about Ace isn’t it?
+…huh?
+"Deon Cey": What’s bothering you is about Ace isn’t it?
+Yeah, but ho-
+"Deon Cey": Like I said, you can’t hide anything from me, no matter how hard you try.
+"Deon Cey": Anyways, thanks for the candy girl, baboosh.
+...
+[i] That… was a bit much.[/i]
+[i]It’s still early but I may need some time to think about all this for myself.[/i]
+[i]Maybe it’s best to close up shop for now.[/i]
+set {day} += 1.0
+[end_timeline]

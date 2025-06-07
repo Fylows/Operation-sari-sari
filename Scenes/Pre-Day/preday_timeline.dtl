@@ -1,0 +1,12 @@
+[style name="main_style"]
+if {day}  ==  1.0:
+	Ugh, last night is still eating away at me, but I must not lose sight of my mission, everyone is relying on me.
+	[end_timeline]
+elif {day}  ==  2.0:
+	return
+elif {day} == 3.0:
+	return
+elif {day} == 4.0:
+	return
+elif {day} == 5.0:
+	return

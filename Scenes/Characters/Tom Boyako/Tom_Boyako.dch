@@ -23,7 +23,7 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": "res://Scenes/Day0/Characters/layered_portrait_tom_boyako.tscn"
+"scene": "res://Scenes/Characters/Tom Boyako/layered_portrait_tom_boyako.tscn"
 }
 },
 &"scale": 1.0

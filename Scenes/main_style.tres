@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=24 format=3 uid="uid://dwmcrupn8umfs"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=26 format=3 uid="uid://dwmcrupn8umfs"]
 
 [ext_resource type="Script" uid="uid://cttpn32sa3mgq" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_b4lft"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_i5jns"]
@@ -12,10 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://c1mjxskpy84wo" path="res://Foreground.tscn" id="10_i5jns"]
 [ext_resource type="Script" uid="uid://cjl244jfeleep" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_vtoah"]
 [ext_resource type="PackedScene" uid="uid://ci8uj3ycs1kd8" path="res://Items.tscn" id="11_ef4no"]
+[ext_resource type="PackedScene" uid="uid://djn840s4gnc1x" path="res://QTEs/QTEs.tscn" id="12_wdk8j"]
 
 [sub_resource type="Resource" id="Resource_8lypf"]
 script = ExtResource("1_b4lft")
-overrides = {}
+overrides = {
+"global_font_size": "30.0"
+}
 
 [sub_resource type="Resource" id="Resource_c4y27"]
 script = ExtResource("1_b4lft")
@@ -42,6 +45,8 @@ overrides = {
 "box_color_use_global": "false",
 "box_size": "Vector2(700, 200)",
 "italics_font": "\"res://Assets/Fonts/League_Spartan,Roboto/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf\"",
+"name_label_custom_font_size": "20.0",
+"name_label_use_global_font_size": "false",
 "normal_font": "\"res://Assets/Fonts/League_Spartan,Roboto/Roboto/Roboto-VariableFont_wdth,wght.ttf\""
 }
 
@@ -75,10 +80,15 @@ script = ExtResource("1_b4lft")
 scene = ExtResource("11_ef4no")
 overrides = {}
 
+[sub_resource type="Resource" id="Resource_8wuec"]
+script = ExtResource("1_b4lft")
+scene = ExtResource("12_wdk8j")
+overrides = {}
+
 [resource]
 script = ExtResource("10_vtoah")
 name = "main_style"
-layer_list = Array[String](["10", "11", "18", "19", "12", "13", "14", "15", "16", "17"])
+layer_list = Array[String](["10", "11", "18", "19", "13", "1a", "12", "14", "15", "16", "17"])
 layer_info = {
 "": SubResource("Resource_8lypf"),
 "10": SubResource("Resource_c4y27"),
@@ -90,8 +100,9 @@ layer_info = {
 "16": SubResource("Resource_pdjiu"),
 "17": SubResource("Resource_366rd"),
 "18": SubResource("Resource_i5jns"),
-"19": SubResource("Resource_wdk8j")
+"19": SubResource("Resource_wdk8j"),
+"1a": SubResource("Resource_8wuec")
 }
 base_overrides = {}
 layers = Array[ExtResource("1_b4lft")]([])
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "12"
