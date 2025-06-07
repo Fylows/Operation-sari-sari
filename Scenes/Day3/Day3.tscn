@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxyrawogp5vx5"]
+
+[ext_resource type="PackedScene" uid="uid://bojim1cxoxcip" path="res://Scenes/Pre-Day/Pre-Day.tscn" id="1_k7oyn"]
+
+[node name="Day3" type="Node2D"]
+
+[node name="Pre-Day" parent="." instance=ExtResource("1_k7oyn")]

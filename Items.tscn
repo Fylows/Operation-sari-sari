@@ -15,7 +15,7 @@ func _ready():
 
 func _on_dialogic_signal(argument: String):
 	match argument:
-		\"tindahan\":
+		\"start_day\":
 			image.texture = load(\"res://Assets/Items/listahan.png\")
 		\"null\":
 			image.texture = null

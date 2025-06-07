@@ -8,12 +8,22 @@
 "sound_moods": {},
 "style": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Ace",
 &"description": "",
 &"display_name": "Ace",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Ace": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://Scenes/Characters/Ace/layered_portrait_ace.tscn"
+}
+},
 &"scale": 1.0
 }

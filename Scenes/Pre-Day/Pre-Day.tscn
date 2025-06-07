@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bojim1cxoxcip"]
+[gd_scene load_steps=24 format=3 uid="uid://bojim1cxoxcip"]
 
 [ext_resource type="Script" uid="uid://cb1ov43it3fvx" path="res://Scenes/Pre-Day/pre_day.gd" id="1_5kk28"]
 [ext_resource type="Texture2D" uid="uid://chu6b7xfche6v" path="res://Assets/Backgrounds/tindahan.png" id="2_sg8gv"]
@@ -7,12 +7,44 @@
 [ext_resource type="Script" uid="uid://dh725w266r5ba" path="res://Scenes/Pre-Day/day_start.gd" id="5_8xfpq"]
 [ext_resource type="Texture2D" uid="uid://cktopypck1wft" path="res://Assets/Items/record_book.png" id="6_kyykf"]
 [ext_resource type="Script" uid="uid://c585uie58f7ri" path="res://Scenes/Pre-Day/notebook.gd" id="7_tcj3e"]
+[ext_resource type="Script" uid="uid://257rxww5gcxm" path="res://Scenes/Pre-Day/nb_chars/ace_nb.gd" id="8_sg8gv"]
+[ext_resource type="Script" uid="uid://bli70xvqt5e5m" path="res://Scenes/Pre-Day/nb_chars/tam_nb.gd" id="9_kyykf"]
+[ext_resource type="Script" uid="uid://brj58wkwya5xa" path="res://Scenes/Pre-Day/nb_chars/deon_nb.gd" id="10_tcj3e"]
+[ext_resource type="Script" uid="uid://gbce6ebe6mrx" path="res://Scenes/Pre-Day/nb_chars/jan_nb.gd" id="11_xjedd"]
+[ext_resource type="Script" uid="uid://dhmp0r1ypspvl" path="res://Scenes/Pre-Day/nb_chars/koopa_nb.gd" id="12_qjbf2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atbon"]
 size = Vector2(147.5, 211.25)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2odrd"]
-size = Vector2(354.333, 281)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sg8gv"]
+size = Vector2(131.333, 365.333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wendk"]
+size = Vector2(164.667, 392)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npyhy"]
+size = Vector2(363.333, 69.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xfpq"]
+size = Vector2(357.667, 31.3334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kk28"]
+size = Vector2(37.6667, 29.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyykf"]
+size = Vector2(57.6667, 36.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcj3e"]
+size = Vector2(48.5, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjedd"]
+size = Vector2(81, 66.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjbf2"]
+size = Vector2(73, 28.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wffjy"]
+size = Vector2(45.3333, 57.3333)
 
 [node name="Pre-Day" type="Node2D"]
 script = ExtResource("1_5kk28")
@@ -62,24 +94,93 @@ offset_right = 62.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.00379, 1)
 text = "Open the store"
 script = ExtResource("5_8xfpq")
 metadata/_edit_use_anchors_ = true
 
+[node name="Area2D2" type="Area2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(1182, 475)
+scale = Vector2(3, 3)
+script = ExtResource("7_tcj3e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D2"]
+position = Vector2(-330, 24)
+shape = SubResource("RectangleShape2D_sg8gv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CanvasLayer/Area2D2"]
+position = Vector2(172.333, 28.3333)
+shape = SubResource("RectangleShape2D_wendk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CanvasLayer/Area2D2"]
+position = Vector2(-83.6667, 174.667)
+shape = SubResource("RectangleShape2D_npyhy")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CanvasLayer/Area2D2"]
+position = Vector2(-82.5, -152.667)
+shape = SubResource("RectangleShape2D_8xfpq")
+
 [node name="Notes" type="Sprite2D" parent="CanvasLayer"]
+visible = false
 position = Vector2(1182, 475)
 scale = Vector2(3, 3)
 texture = ExtResource("6_kyykf")
 
-[node name="Area2D" type="Area2D" parent="CanvasLayer/Notes"]
-script = ExtResource("7_tcj3e")
+[node name="C1" type="Area2D" parent="CanvasLayer/Notes"]
+script = ExtResource("8_sg8gv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/Area2D"]
-position = Vector2(-86.1667, -1.50003)
-shape = SubResource("RectangleShape2D_2odrd")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C1"]
+position = Vector2(-204.167, -91)
+shape = SubResource("RectangleShape2D_5kk28")
+debug_color = Color(0.85692, 0.249775, 0.671723, 0.42)
+
+[node name="C2" type="Area2D" parent="CanvasLayer/Notes"]
+script = ExtResource("9_kyykf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C2"]
+position = Vector2(-192.5, -23)
+shape = SubResource("RectangleShape2D_kyykf")
+debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
+
+[node name="C3" type="Area2D" parent="CanvasLayer/Notes"]
+script = ExtResource("10_tcj3e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C3"]
+position = Vector2(-200.25, 48.6667)
+shape = SubResource("RectangleShape2D_tcj3e")
+debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
+
+[node name="C4" type="Area2D" parent="CanvasLayer/Notes"]
+script = ExtResource("11_xjedd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C4"]
+position = Vector2(15.8333, -71)
+shape = SubResource("RectangleShape2D_xjedd")
+debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
+
+[node name="C5" type="Area2D" parent="CanvasLayer/Notes"]
+script = ExtResource("12_qjbf2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C5"]
+position = Vector2(26.6667, -2.33333)
+shape = SubResource("RectangleShape2D_qjbf2")
+debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
+
+[node name="C6" type="Area2D" parent="CanvasLayer/Notes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C6"]
+position = Vector2(32, 66)
+shape = SubResource("RectangleShape2D_wffjy")
+debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
 
 [connection signal="input_event" from="CanvasLayer/Area2D" to="CanvasLayer/Area2D" method="_on_input_event"]
 [connection signal="mouse_entered" from="CanvasLayer/Area2D" to="CanvasLayer/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Area2D" to="CanvasLayer/Area2D" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
-[connection signal="input_event" from="CanvasLayer/Notes/Area2D" to="CanvasLayer/Notes/Area2D" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Area2D2" to="CanvasLayer/Area2D2" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/C1" to="CanvasLayer/Notes/C1" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/C2" to="CanvasLayer/Notes/C2" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/C3" to="CanvasLayer/Notes/C3" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/C4" to="CanvasLayer/Notes/C4" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/C5" to="CanvasLayer/Notes/C5" method="_on_input_event"]

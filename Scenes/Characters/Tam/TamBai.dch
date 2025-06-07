@@ -8,12 +8,22 @@
 "sound_moods": {},
 "style": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Tam",
 &"description": "",
 &"display_name": "Tam Bai",
 &"mirror": false,
 &"nicknames": ["Tam Bai"],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Tam": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://Scenes/Characters/Tam/layered_portrait_tambai.tscn"
+}
+},
 &"scale": 1.0
 }

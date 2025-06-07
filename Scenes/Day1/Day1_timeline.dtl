@@ -1,7 +1,8 @@
 [style name="main_style"]
-[signal arg="tindahan"]
+[signal arg="start_day"]
 [background arg="bg_phd.jpg" fade="3.0" transition="Simple Fade"]
-join Tom_Boyako center [animation="Fade In"]
+join TamBai left [animation="Slide In Left"]
+join Ace right [animation="Slide In Left" length="4.0"]
 TamBai: Yo mari! Can I get a- huh? Why the long face? Get dumped again?
 Ah, it’s nothing. don’t worry about it, anyway what can I get you?
 TamBai: Huh weird, you usually go all feral when I tease you about your exes, anyway it doesn’t matter.
@@ -34,7 +35,6 @@ Children: Pabili po!
 Huh? Oh yeah what can I get you all?
 Children: Kendi nga po– sampung piso.
 Sure thing! Let me just go get some real quick.
-label qte (qte)
 [wait time="0.2"]
 [signal arg="qte1_d1"]
 [wait time="5.0"]
@@ -81,6 +81,9 @@ Yeah, but ho-
 ...
 [i] That… was a bit much.[/i]
 [i]It’s still early but I may need some time to think about all this for myself.[/i]
+label end (end)
 [i]Maybe it’s best to close up shop for now.[/i]
 set {day} += 1.0
+[signal arg="end_d1"]
+set {d1_e} = true
 [end_timeline]

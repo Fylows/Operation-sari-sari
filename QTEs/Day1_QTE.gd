@@ -2,6 +2,7 @@ extends Area2D
 @onready var label = $"../Label"
 @onready var label_guide = $"../WTD"
 @onready var area = $"."
+@onready var hint = $"../Sparkle"
 
 func _on_mouse_entered() -> void:
 	print("hello")
@@ -9,4 +10,6 @@ func _on_mouse_entered() -> void:
 	label.visible = false
 	label_guide.visible = false
 	area.visible = false
+	hint.visible = false
+	hint.pause()
 	Dialogic.handle_next_event()

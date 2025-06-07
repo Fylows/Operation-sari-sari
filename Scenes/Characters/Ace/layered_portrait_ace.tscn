@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://crnt2g8ovcdph"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Ace/custom_layered_portrait.gd" id="1_uubi5"]
+[ext_resource type="Texture2D" uid="uid://dvdcquulqspc0" path="res://Assets/Characters/Ace/ace_base.png" id="2_vfell"]
+[ext_resource type="Texture2D" uid="uid://crk038eh50xlk" path="res://Assets/Characters/Ace/ace_avoidant.png" id="3_ees45"]
+[ext_resource type="Texture2D" uid="uid://0yx3cvjytlxw" path="res://Assets/Characters/Ace/ace_neutral.png" id="4_wy5p4"]
+
+[node name="LayeredPortrait" type="CanvasGroup"]
+script = ExtResource("1_uubi5")
+
+[node name="base" type="Sprite2D" parent="."]
+texture = ExtResource("2_vfell")
+
+[node name="face" type="Node2D" parent="."]
+
+[node name="avoidant" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("3_ees45")
+
+[node name="neutral" type="Sprite2D" parent="face"]
+texture = ExtResource("4_wy5p4")

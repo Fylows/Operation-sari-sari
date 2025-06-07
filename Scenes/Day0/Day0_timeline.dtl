@@ -12,15 +12,18 @@ Excuse me?
 Tom_Boyako: One of your townspeople has just been murdered, and you seem unaware? I’m having second thoughts choosing you now.
 Murder, unaware? Wait a second just what is all this about?
 Tom_Boyako: Ace’s father? he’s was murdered last week.
+update Tom_Boyako [extra_data="set face/annoyed"]
 …
 Tom_Boyako: You are familiar with Ace aren’t you? I did choose you because of that exact reason.
 Tom_Boyako: If there’s anyone familiar with all the people in this town, it would be you.
 But this is just so sudden, I’m not sure if I’m followi-
+update Tom_Boyako [extra_data="set face/serious"]
 Tom_Boyako: Justice doesn’t wait Mari. The more we let this linger the more blood we may find being spilled.
 Tom_Boyako: Tomorrow, when you open your store, there’s one thing I want you to do.
 …and that is?
 Tom_Boyako: Interrogate. Ask the people what they know, look for as much leads as you can.
 Tom_Boyako: You know these people better than I do, than anyone does. If there’s anyone to notice something wrong, it will be you.
+update Tom_Boyako [extra_data="set face/evil"]
 Tom_Boyako: Mari Tesoro, save this town.
 set {day} += 1.0
 [end_timeline]

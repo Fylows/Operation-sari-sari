@@ -4,4 +4,4 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Day1" parent="." instance=ExtResource("1_4p5i8")]
+[node name="Pre-day" parent="." instance=ExtResource("1_4p5i8")]

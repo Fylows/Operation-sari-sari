@@ -1,16 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4sxyyflilgxe"]
+[gd_scene load_steps=7 format=3 uid="uid://c4sxyyflilgxe"]
 
 [ext_resource type="Script" uid="uid://gt5fgl51h7ti" path="res://Scenes/Characters/Tom Boyako/custom_layered_portrait.gd" id="1_uubi5"]
-[ext_resource type="Texture2D" uid="uid://bbkoexnfhj675" path="res://Assets/Characters/Female Sprite by Sutemo.png" id="2_ayfwr"]
+[ext_resource type="Texture2D" uid="uid://pyt1e7amfk88" path="res://Assets/Characters/Tom Boyako/tomb_base.png" id="2_wmkxi"]
+[ext_resource type="Texture2D" uid="uid://djjfi1fahw1dl" path="res://Assets/Characters/Tom Boyako/tomb_annoyed.png" id="3_a4af3"]
+[ext_resource type="Texture2D" uid="uid://co8da72divo2p" path="res://Assets/Characters/Tom Boyako/tomb_evil.png" id="4_3rmry"]
+[ext_resource type="Texture2D" uid="uid://7htv1lkna4yi" path="res://Assets/Characters/Tom Boyako/tomb_scared.png" id="5_4paak"]
+[ext_resource type="Texture2D" uid="uid://esse02csa88n" path="res://Assets/Characters/Tom Boyako/tomb_serious.png" id="6_wrfix"]
 
 [node name="LayeredPortrait" type="CanvasGroup"]
 script = ExtResource("1_uubi5")
 
-[node name="Layer1" type="Sprite2D" parent="."]
-texture = ExtResource("2_ayfwr")
+[node name="base" type="Sprite2D" parent="."]
+texture = ExtResource("2_wmkxi")
 
-[node name="Group1" type="Node2D" parent="."]
+[node name="face" type="Node2D" parent="."]
 
-[node name="Layer1" type="Sprite2D" parent="Group1"]
+[node name="annoyed" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("3_a4af3")
 
-[node name="Layer2" type="Sprite2D" parent="Group1"]
+[node name="evil" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("4_3rmry")
+
+[node name="scared" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("5_4paak")
+
+[node name="serious" type="Sprite2D" parent="face"]
+texture = ExtResource("6_wrfix")

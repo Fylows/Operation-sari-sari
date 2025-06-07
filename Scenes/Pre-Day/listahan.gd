@@ -6,6 +6,7 @@ extends Area2D
 @onready var listahan := $"../Listahan"
 @onready var vis = false
 @onready var button = $"../Button"
+@onready var area = $"../Area2D2"
 
 func _ready():
 	var epsilon : int  = 2
@@ -48,6 +49,8 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("enter") && vis == true:
 		vis = false
 		queue_redraw()
+		
+		area.visible = true
 		listahan.visible = false
 		notes.visible = true
 		button.visible = false

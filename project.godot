@@ -23,20 +23,41 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Ace": "res://Scenes/Characters/Ace/Ace.dch",
+"Ace/Ace": "res://QTEs/Characters/Ace/Ace.dch",
 "Children": "res://Scenes/Characters/Children/Children.dch",
+"Children/Children": "res://QTEs/Characters/Children/Children.dch",
 "Deon Cey": "res://Scenes/Characters/Deon/Deon Cey.dch",
+"Deon/Deon Cey": "res://QTEs/Characters/Jun/Deon/Deon Cey.dch",
+"Jan": "res://QTEs/Characters/Jan/Jan.dch",
+"Jun": "res://QTEs/Characters/Jun/Jun.dch",
+"Tam/TamBai": "res://QTEs/Characters/Tam/TamBai.dch",
 "TamBai": "res://Scenes/Characters/Tam/TamBai.dch",
+"Tom Boyako/Tom_Boyako": "res://QTEs/Characters/Tom Boyako/Tom_Boyako.dch",
 "Tom_Boyako": "res://Scenes/Characters/Tom Boyako/Tom_Boyako.dch"
 }
 directories/dtl_directory={
 "Day0_timeline": "res://Scenes/Day0/Day0_timeline.dtl",
 "Day1_timeline": "res://Scenes/Day1/Day1_timeline.dtl",
-"preday_timeline": "res://Scenes/Pre-Day/preday_timeline.dtl"
+"Day2_timeline": "res://Scenes/Day2/Day2_timeline.dtl",
+"Day3_timeline": "res://Scenes/Day3/Day3_timeline.dtl",
+"Day4_timeline": "res://Scenes/Day4/Day4_timeline.dtl",
+"Day5_timeline": "res://Scenes/Day5/Day5_timeline.dtl",
+"ace_nb": "res://Scenes/Notebook/ace_nb.dtl",
+"deon_nb": "res://Scenes/Notebook/deon_nb.dtl",
+"jan_nb": "res://Scenes/Notebook/jan_nb.dtl",
+"koopa_nb": "res://Scenes/Notebook/koopa_nb.dtl",
+"preday_timeline": "res://preday_timeline.dtl",
+"tam_nb": "res://Scenes/Notebook/tam_nb.dtl"
 }
 layout/style_list=["res://Scenes/main_style.tres"]
 layout/default_style="res://Scenes/Day0/Day_0_Style.tres"
 variables={
-"day": 1,
+"d1_e": false,
+"d2_e": false,
+"d3_e": false,
+"d4_e": false,
+"d5_e": false,
+"day": 2,
 "qte": false
 }
 glossary/default_case_sensitive=true
