@@ -147,7 +147,6 @@ Jan… you’re not making sense.
 Jan: You think I wanted this– that I wanted him dead? He– he was my only friend, and I just– I can’t…
 Jan: Tam said– Tam said there was a call, that it was me. But it couldn’t have been me– or was it? I don’t– I don’t know…
 Jan: Help me– PLEASE! It wasn’t me! Wasn’t me, wasn’t me, w–
-
 - Fight back
 	set {tam_sus} += 2.0
 	[i] I gave manong Jan a good slap [/i]

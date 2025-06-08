@@ -23,6 +23,7 @@ TamBai: …I was just joking, jeez. What is it?
 [b][i]Ahem.[/i][/b] Sorry about that.
 I just… well. I heard from someone that I could talk to you about…
 …[REDACTED].
+TamBai: Oh... and who did you hear that from?
 if {tam_sus} > 3.0:
 	update TamBai [extra_data="set face/confused"]
 	# Update Tam's expression here to a dark expression
@@ -148,3 +149,4 @@ if {tam_sus} < 3.0:
 [signal arg="end_day"]
 set {day} += 1.0
 set {day_end} = true
+-  | [if {culprit} == "aa"]
