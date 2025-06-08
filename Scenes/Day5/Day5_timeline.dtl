@@ -1,6 +1,119 @@
-[style name="main_style"]
 set {day_end} = false
+[style name="main_style"]
 [signal arg="start_day"]
+if {tam_sus} == 1.0:
+	join Ace center [animation="Fade In Up" wait="true"]
+	Ace: ...
+	Ay! Ace you scared me!
+	Ace: Good morning.
+	Just you today? So I’m guessing you’ll take a co-
+	Ace: Spare the formalities, I didn’t come here to buy softdrinks.
+	Ace: I wouldn’t come alone otherwise…
+	...
+	Ace: Thanks to you he finally gave up on me, the protection I never asked for.
+	Ace, what do you mean?
+	Ace: It’s time to let you know the truth , or at least what I know of it.
+	...
+	Ace: Tam… he’s not who you think he is.
+	Ace: He’s not just a friend of mine…
+	...
+	Ace: ...Nor is he the culprit.
+	So, just who is he then?
+	Ace: Tam is my guardian, or at least he believes himself to be.
+	Ace: Ever since that night, he’s been secretly blaming himself, taking it upon himself to watch over me
+	Ace: Tam was an underground leader of my father’s activist group, working in secret to push my father’s values forward
+	?!
+	Ace: He took everything from my father to heart, although from the outset it may not seem like it.
+	Ace: Perhaps he’s just that good at hiding it all.
+	Ace: The loss devastated him, perhaps even more than me, losing someone he looked up to so much.
+	Ace: I guess in his mind, he couldn’t lose me as well, he wanted to protect me, in his own way.
+	So… what should I do now?
+	Ace: Find the real culprit.
+	Ace: It’s clear to me, that Tam is being used as a scapegoat.
+	Ace: Whoever is behind all this, wants him out of the picture, and fast.
+	Ace: He carries a heavy burden, he may not realize it but he’s acting recklessly.
+	Ace: He and I are still both children, but the weight of everything he’s holding is crushing him faster than it’s crushing me.
+	...
+	Ace: Today is the day we find out the truth. For my father, and for Tam.
+	update Ace right [move_time="0.3"]
+	join TamBai left [animation="Slide In Left" wait="true"]
+	TamBai: Hoy, what’s all this about me huh?
+	Tam?!
+	Ace: ...
+	TamBai: Ace, I told you it’s bad to sneak out didn’t I?
+	Ace: I know.. But-
+	TamBai: Either way it doesn’t matter. , I’m not here for coke today, just to let you know.
+	TamBai: I mentioned that the truth will be known soon enough, so here it is.
+	join Jan center [animation="Fade In Down" wait="true"]
+	Jan: Hah.... ha...
+	Manong Jan, you brought him over?
+	TamBai: He was sleeping all day yesterday, and now that he’s awake, we’ll all finally get answers out of him.
+	So what you meant was-?
+	TamBai: Yes, staying at my place meant that he had absolutely no access to alcohol or whatever was frying his brain.
+	TamBai: He’s sober now, at least by his standards
+	Jan: Loko kang bata ka… naisahan mo ako diyan ha…
+	Anyway, Manong Jan, you were saying it wasn’t you who committed the crime, is that true?
+	Jan: …You’re going too fast … Let’s start from the beginning..
+	Huh?
+	Jan: Tam… from the top…
+	TamBai: Well I guess there’s no escaping it now.
+	TamBai: The night of the incident, Ace’s father got a call… from Manong Jan.
+	What was it about…?
+	TamBai: The details were fuzzy for me, but from what I know it had something to do with Manong Jan being kicked out of the group, and wanting a second chance.
+	TamBai: Ace and I felt something was up, and volunteered to go with him, but he always had a soft spot for Ace, in his own way.
+	Ace: He never wanted me going out.
+	?!
+	Ace: His activism was a dangerous job, as he would say. It puts him in the frontline of danger and at risk of being shut up by the government, by any means necessary.
+	Ace: Overtime, I found it to be more and more suffocating, which is why I confided in Tam, the small comfort I had in my days
+	TamBai: And I turned out to be just like him huh? I’m so stupid…
+	TamBai: Anyhow, on that night, due to our insistence to go with him, Ace’s father had to keep us locked in his house, and went off alone.
+	TamBai: Then… we realized, he was taking too long, so we broke out through the window.
+	TamBai: Though of course, we were too late…
+	Ace: We couldn’t make out the figure in the dark, and although Tam was positive it was Manong Jan, I’m sure it wasn’t.
+	Jan: How many times do I have to tell you… It wasn’t me…
+	Jan: That night… I wasn’t there…
+	Jan: …Yung number ng tatay mo… I burned it long ago…
+	Jan: …On the day I got kicked out.
+	Ace: ...
+	Jan: Me and him disagreed on many things… But I would never lay a finger on that man…
+	TamBai: But you’re the only one who walks around all night!
+	Jan: I’m aware… but on that night… I was being interrogated by Koopa…
+	TamBai: This is why we keep telling you to quit the bisyo already!
+	Jan: ...
+	Jan: It doesn’t matter… what matters is that on that day, I spent the entire night at the barangay hall until morning came… Koopa wouldn’t let me out otherwise…
+	I see...
+	…Though however convincing this is, all I have to go through is your word of mouth.
+	While I believe you all are good people, hearing what you all went through, I still have to make a decision.
+	Ace: … I know.
+	Ace: That’s why I trust you to make the right call.
+	Ace: If it wasn’t any of those here, then there’s only one person it could have been.
+	Ace: One person with a motive, one person who could have been there at that time.
+	Ace: Please see through everything, please save us.
+	Ace: Find the true culprit.
+	[signal arg="tam_susBook"]
+	[end_timeline]
+else:
+	...
+	Sure is quiet today…
+	Where are my regulars?
+	[b]Unbeknownst to her, Tam and Ace were getting ready to leave.[/b]
+	join Ace right
+	join TamBai left
+	[signal arg="end_day"]
+	Ace: This just isn't right, Tam.
+	TamBai: What matters is that you're safe, Ace. I promised— I promised.
+	Ace: So what, we're just going to leave?
+	TamBai: Stop it, Ace. Just do what I say—
+	Ace: You're fine with leaving Manong Jan as our scapegoat? Come on.
+	Ace: I knew you had some dislike for the guy, after what happened, but—
+	Ace: This is low, even for you, Tam.
+	TamBai: What matters to me is I keep my promise to your father.
+	TamBai: Please, Ace. Don't resist me on this one.
+	TamBai: Please… let me honor my promise.
+	Ace: ...
+	Ace: Fine.
+	[end_timeline]
 [signal arg="end_day"]
 set {day} += 1.0
 set {day_end} = true
+[end_timeline]

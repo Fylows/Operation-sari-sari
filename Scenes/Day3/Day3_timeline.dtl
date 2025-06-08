@@ -1,5 +1,4 @@
 set {day_end} = false
-jump end
 [style name="main_style"]
 [signal arg="start_day"]
 [background arg="res://Assets/Backgrounds/Background.png" fade="0.0"]

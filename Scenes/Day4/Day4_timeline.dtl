@@ -1,6 +1,151 @@
-[style name="main_style"]
 set {day_end} = false
+[style name="main_style"]
 [signal arg="start_day"]
+[background arg="res://Assets/Backgrounds/Background.png" fade="0.0"]
+Everyday seems to get more and more insane…
+# Can insert a QTE here to pass time
+Man, Tam sure is late today…
+I sure hope Manong Jan is ok too…
+I wonder what Tam ended up doing…
+join TamBai center
+[i]Speak of the devil.[/i]
+Oy, Tam! Kamusta? Were you able to help Manong Jan?
+TamBai: He’s doing fine, tulog lang katapat. Anyway, isang Coke naman jan.
+You’re alone today?
+TamBai: Ah, yea. Ace isn’t feeling well, pero dadaan ako sa may bakery mamaya para bilhan siya ng tinapay.
+Sakto. I wanted to talk to you about something…
+TamBai: Hey. I know you got rejected a lot, but to stoop this low…
+That’s not–
+TamBai: I mean, I wouldn’t refuse. I think– you and me– its worth a shot–
+No, stop–
+TamBai: What, don’t be shy about it. I mean, it’s me we’re talking about–
+[b]HEY![/b]
+TamBai: …I was just joking, jeez. What is it?
+[b][i]Ahem.[/i][/b] Sorry about that.
+I just… well. I heard from someone that I could talk to you about…
+…[REDACTED].
+if {tam_sus} > 3.0:
+	update TamBai [extra_data="set face/confused"]
+	# Update Tam's expression here to a dark expression
+	TamBai: …
+	TamBai: So I arrived too late, huh…
+	TamBai: Just what did Manong Jan tell you?
+	Not much, actually, but that’s why I–
+	TamBai: This isn’t a game, . I told Jan to keep his mouth shut–
+	That doesn’t matter, Tam.  Ace–
+	TamBai: Ace?? I just told you to stop poking your nose in places they shouldn’t be in.
+	But I–
+	TamBai: Tama na.
+	What are you hiding, Tam?
+	update TamBai [animation="Shake X"]
+	TamBai: –!
+	update TamBai left [move_time="0.15" move_ease="in" move_trans="quint"]
+	join Ace right [animation="Slide In Right"]
+	Ace: …Is this a bad time?
+	Ace! Tam told me you were sick.
+	update Ace [animation="Shake X"]
+	Ace: Huh? Wala naman akong dinamdam today, late lang nagising…
+	[i]I flick my eyes to Tam[/i]
+	Ace: Ahem. Bibili lang sana ng biscuit. For snacks.
+	TamBai: I told you I’ll get you anything if you need it. You didn’t need to go out.
+	Ace: Kaya ko naman, Tam. I need to do things for myself.
+	TamBai: But it's not safe, what if–
+	Ace: Ayan ka na naman, with your what ifs! It’s suffocating. You’re just as controlling as–
+	# Ace's changes to a timid expression here
+	update Ace [extra_data="set face/avoidant"]
+	[wait time="0.7"]
+	Ace: –as my father…
+	TamBai: If he wasn’t so controlling, then maybe we wouldn’t be in this situation!
+	TamBai: Then maybe I wouldn’t have had to do what I did!
+	# Tam sus points ++
+	set {tam_sus} += 1.0
+	Tam, teka lang–
+	TamBai: Shut up, ! This doesn’t concern you.
+	It does, if you’re fighting at my storefront. You’re scaring the other customers away!
+	[b][i]I flick my eyes to Tam[/i][/b]
+	[i]Ace looks uncomfortable with what's going on.[/i]
+	Ace, why don’t you come inside for a bit?
+	leave Ace [animation="Slide Out Right"]
+	update TamBai center [move_time="0.1" move_ease="in" move_trans="quint"]
+	TamBai: Suffocating? I’m trying to keep you alive, Ace
+	TamBai: Now if you don’t stay with me, you’ll be dead too.
+	[b][i]Tam reaches for Ace. Ace flinches away.[/i][/b]
+	Step away from Ace, Tam.
+	I-
+	…
+	[wait time="1.0"]
+	I still haven’t forgotten what happened yesterday, Tam.
+	Everytime someone is about to give me information, you stop them.
+	I’ve had enough. What are you hiding?
+	Ace: …
+	[b][i]Tam looks at Ace, but then averted his gaze out of fear.[/i][/b]
+	TamBai: I… can’t tell you everything.
+	… and why not?
+	TamBai: Because I don’t know who’s after me.
+	TamBai: I don’t know for sure if you’re not one of them.
+	TamBai: I can’t be careless with what I say, not when lives are on the line…
+	TamBai: Not when he trusted me with this.
+	TamBai: What I can tell you though, is whatever Manong Jan told you?
+	TamBai: It was probably incomplete.
+	TamBai: After all, he’s responsible for it all.
+	What.. are you talking about?
+	TamBai: You win , do what you will, I won’t stop you any longer. There’s no need to stop you at this point.
+	TamBai: You’ll know the truth, soon enough.
+	TamBai: Whether you get hurt or not though, I have no guarantees..
+if {tam_sus} < 3.0:
+	A little birdie told me about Manong Jan being a part of… you know…
+	TamBai: Ha! “Little birdie” pa nga. Si Deon ‘yan, no?
+	That doesn’t matter.
+	TamBai: Ay sus! I see them hanging out more here recently. It doesn’t take much to put two and two together.
+	Pfft, got me on that one.
+	…
+	Pero ano ngang meron?
+	TamBai: You know, your name suits you.
+	Huh?
+	TamBai: Y’know. Short for tes!
+	Grabe ka naman! It gets slow here, sometimes. I’m happy for the distraction.
+	TamBai: Distraction, huh…
+	…
+	So ano nga? You’re keeping me on my toes here…
+	TamBai: Hay. All I know is [ Ace’s Father ] and Manong Jan used to work together under [REDACTED].
+	…
+	TamBai: But Manong Jan… he fell into addiction. Got into a bit of a scuffle with [Ace’e Father]. Whole town probably heard it.
+	TamBai: The next day? Looked like bruised tomatoes, both of them.
+	TamBai: Manong Jan was never the same after that, though.
+	A motive? For Jan?
+	# ++ sus points kay Jan??
+	set {jan_sus} += 1.0
+	TamBai: Anyway, that’s all I know.
+	What, that’s it? Damot mo naman! Deon said you’d know more…
+	TamBai: Ah, so si Deon nga nagsabi.
+	… [b][i]I avert my gaze[/i][/b]
+	TamBai: …
+	TamBai: May plano ka bang iabot yung Coke? It’s getting warmer by the second.
+	–!!
+	TamBai: Haha! If this is how you treat paying customers, I might have to leave a bad review. Such poor service…
+	Che! Ayan na yung Coke mo. Now, will you get out of my face?
+	TamBai: Eto na, eto na. Puntahan ko nalang nga si Ace, grabe ka na sa’kin.
+	I don’t know how that girl stomachs hanging out with you…
+	But do say hi to Ace for me, will you? And tell her to get well soon!
+	TamBai: Will do.
+	TamBai: And, uh. ? Don’t buy too much into what Deon says about things. Alam mo naman how things can get warped sa usap-usapan.
+	set {deon_sus} += 1.0
+	Tam.
+	TamBai: Hm?
+	TamBai: I still want my answers.
+	TamBai: Tsk. , don't poke your nose where it doesn't belong.
+	Hey, I just want to know what happened to—
+	TamBai: Leave it.
+	Look, I—
+	TamBai: I said leave it.
+	I’ve been sent here to investigate the murder of [----------]—
+	TamBai: I know.
+	and if you continue being uncooperative, I might have to cuff you for obstructio— wait, you knew?
+	TamBai: You aren't exactly… subtle with your prying, detective.
+	TamBai: And this isn't my first rodeo with you people either.
+	TamBai: But you— you're a good person.
+	TamBai: You'll get your answers. Soon enough.
+	leave TamBai
 [signal arg="end_day"]
-set {day_end} = true
 set {day} += 1.0
+set {day_end} = true

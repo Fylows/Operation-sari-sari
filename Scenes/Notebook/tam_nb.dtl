@@ -1,1 +1,15 @@
-This is Thomas Bayan, o mas kilala bilang Tam Bai.
+if {day_end} == true and {day} >= 3 and day != 5:
+	if {tam_sus} >= 3:
+		Should I arrest them?
+		- yes
+			set {culprit} = "Ace"
+		- no
+			That doesnt seem quite right...
+			set {culprit} = "none"
+	elif {day} == 5.0:
+		I heard that Tam was nowhere to be seen this morning.
+		I dont think it's tam.
+	else:
+		I have no reason to suspect Tam.
+else:
+	This is Thomas Bayan, o mas kilala bilang Tam Bai.

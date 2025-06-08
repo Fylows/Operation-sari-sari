@@ -58,7 +58,7 @@ variables={
 "jan_sus": 0,
 "koopa_sus": 0,
 "qte": false,
-"tam_sus": 0,
+"tam_sus": 3,
 "tom_sus": 0
 }
 glossary/default_case_sensitive=true

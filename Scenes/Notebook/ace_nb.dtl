@@ -1,9 +1,12 @@
-if {day_end} == true:
-	Should I arrest them?
-	- yes
-		set {culprit} = "Ace"
-	- no
-		That doesnt seem quite right...
-		set {culprit} = "none"
+if {day_end} == true and {day} >= 3:
+	if {tam_sus} >= 3:
+		Should I arrest them?
+		- yes
+			set {culprit} = "Ace"
+		- no
+			That doesnt seem quite right...
+			set {culprit} = "none"
+	else:
+		I have no reason to suspect Tam.
 else:
 	This is Janice "Ace" Kalderon

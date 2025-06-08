@@ -26,6 +26,7 @@ script = ExtResource("1_r4ra8")
 
 [node name="Tindahan" type="CanvasLayer" parent="."]
 layer = -1
+visible = false
 
 [node name="Tindahan" type="TextureRect" parent="Tindahan"]
 anchors_preset = 15
