@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="SariSari"
-run/main_scene="uid://clddd5pardchd"
+config/name="Pabili po"
+run/main_scene="res://Scenes/Menu/main_menu.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://chsglmsfsai04"
 
 [autoload]
 
@@ -25,10 +25,11 @@ directories/dch_directory={
 "Ace": "res://Scenes/Characters/Ace/Ace.dch",
 "Children": "res://Scenes/Characters/Children/Children.dch",
 "Deon Cey": "res://Scenes/Characters/Deon/Deon Cey.dch",
-"Jan": "res://Scenes/Characters/Jiro/Jan.dch",
+"Jan": "res://Scenes/Characters/jan/Jan.dch",
 "Koopa": "res://Scenes/Characters/Koopa/Koopa.dch",
 "TamBai": "res://Scenes/Characters/Tam/TamBai.dch",
-"Tom_Boyako": "res://Scenes/Characters/Tom Boyako/Tom_Boyako.dch"
+"Tom_Boyako": "res://Scenes/Characters/Tom Boyako/Tom_Boyako.dch",
+"jun": "res://Scenes/Characters/JunJun/jun.dch"
 }
 directories/dtl_directory={
 "Day0_timeline": "res://Scenes/Day0/Day0_timeline.dtl",
@@ -45,20 +46,21 @@ directories/dtl_directory={
 "jan_nb": "res://Scenes/Notebook/jan_nb.dtl",
 "koopa_nb": "res://Scenes/Notebook/koopa_nb.dtl",
 "preday_timeline": "res://preday_timeline.dtl",
-"tam_nb": "res://Scenes/Notebook/tam_nb.dtl"
+"tam_nb": "res://Scenes/Notebook/tam_nb.dtl",
+"tom_nb": "res://Scenes/Notebook/tom_nb.dtl"
 }
 layout/style_list=["res://Scenes/main_style.tres"]
 layout/default_style="res://Scenes/Day0/Day_0_Style.tres"
 variables={
 "culprit": "none",
-"day": 5,
+"day": 0,
 "day_end": false,
 "deon_sus": 0,
 "ed": 0,
 "jan_sus": 0,
 "koopa_sus": 0,
 "qte": false,
-"tam_sus": 3,
+"tam_sus": 0,
 "tom_sus": 0
 }
 glossary/default_case_sensitive=true

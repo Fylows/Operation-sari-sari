@@ -1,12 +1,13 @@
 [style name="main_style"]
-[background arg="res://Assets/Backgrounds/Background.png" fade="0.0"]
+[background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" fade="0.0"]
+[signal arg="day"]
 [signal arg="start_day"]
 [wait time="2.0"]
-join  center
-Heh heh…
+join Jan center
+Jan: Heh heh…
 ?!
 Uhh.. can I help you?
-Marlboro..
+Jan: Marlboro..
 Alright, sure.. thing?
 [i]Wow. First thing in the morning and this guy already wants a smoke huh?[/i]
 [i]Mr. Satabi has always been a weird one, but to see him this early in the morning is certainly strange.[/i]
@@ -18,7 +19,7 @@ label qte (qte)
 [signal arg="qte1_d2"]
 [wait time="5.0"]
 if {qte} == false:
-	Jan: WHY ARE YOU SO FUCKING SLOW?! WAG NA NGA.
+	Jan: BAT BA NAPAKA BAGAL?? AYAN LANG OH?! Hayst wag na nga.
 	set {jan_sus} += 1.0
 else:
 	Here’s your cigarettes..
@@ -89,10 +90,10 @@ What was that abo-
 TamBai: Wait, hold on. Is that Junjun I see?
 TamBai: Psst! Jun!!!
 leave TamBai
-join  center
-Hello po…
+join jun center
+jun: Hello po…
 Hi Jun! What brings you here today?
-Sinigang mix please, for lunch.
+jun: Sinigang mix please, for lunch.
 Ah, you guys are cooking Sinigang? Sure thing! Let me get that for you.
 leave 
 join TamBai center
@@ -101,8 +102,8 @@ TamBai: AND YOU HAVE A MOON BLOSSOM TOO?!
 TamBai: Just how lucky are you?!
 leave TamBai
 join  center
-Oh, I just play this game a lot, it’s a lot easier to play on my Ipad.
-Anyway, Hi Kuya Tam, Hi Ace..
+jun: Oh, I just play this game a lot, it’s a lot easier to play on my Ipad.
+jun: Anyway, Hi Kuya Tam, Hi Ace..
 leave 
 join TamBai center
 TamBai: What’s up Jun!
@@ -112,7 +113,7 @@ Ace: Hello Jun..
 Here Jun, your sinigang mix.
 leave Ace
 join  center
-Thank you po!
+jun: Thank you po!
 Oh yeah Jun one more thing before you go.
 There seems to be a strange man walking around late at night, so be sure not to stay outdoors playing too late!
 leave 
@@ -120,8 +121,8 @@ join Ace center
 Ace: ?!
 leave Ace
 join  center
-Oh it’s ok, I only play grow a garden anyway.
-I wouldn’t want to end up like Ace’s father…
+jun: Oh it’s ok, I only play grow a garden anyway.
+jun: I wouldn’t want to end up like Ace’s father…
 leave 
 join Ace center
 Ace: !!!
@@ -130,7 +131,7 @@ join TamBai center
 TamBai: Jun! Anong oras na, your game–
 leave TamBai
 join  center
-Kuya Tam, you promised pa nga sa dad ni Ace noon na–
+jun: Kuya Tam, you promised pa nga sa dad ni Ace noon na–
 leave 
 join TamBai center
 TamBai: Ok! I think that’s enough! Jun, why don’t you go home already?
@@ -141,6 +142,8 @@ leave TamBai
 Huh?
 label end (end)
 [i]What was that?[/i]
+[i]I think I'll close shop for today.[/i]
 set {day} += 1.0
 [signal arg="end_day"]
+set {day_end} = true
 [end_timeline]

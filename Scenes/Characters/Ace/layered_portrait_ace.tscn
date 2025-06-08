@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://crnt2g8ovcdph"]
+[gd_scene load_steps=8 format=3 uid="uid://crnt2g8ovcdph"]
 
 [ext_resource type="Script" uid="uid://cxot5r64nyum7" path="res://Scenes/Characters/Ace/custom_layered_portrait.gd" id="1_uubi5"]
-[ext_resource type="Texture2D" uid="uid://dvdcquulqspc0" path="res://Assets/Characters/Ace/ace_base.png" id="2_vfell"]
-[ext_resource type="Texture2D" uid="uid://crk038eh50xlk" path="res://Assets/Characters/Ace/ace_avoidant.png" id="3_ees45"]
-[ext_resource type="Texture2D" uid="uid://0yx3cvjytlxw" path="res://Assets/Characters/Ace/ace_neutral.png" id="4_wy5p4"]
+[ext_resource type="Texture2D" uid="uid://dqd038mjk1ku1" path="res://Assets/Characters/Ace/ace_base.png" id="2_vfell"]
+[ext_resource type="Texture2D" uid="uid://byraho2ywugkw" path="res://Assets/Characters/Ace/ace_avoidant.png" id="3_ees45"]
+[ext_resource type="Texture2D" uid="uid://btk48qg1vjarc" path="res://Assets/Characters/Ace/ace_neutral.png" id="4_wy5p4"]
+[ext_resource type="Texture2D" uid="uid://2kjwsysbyabn" path="res://Assets/Characters/Ace/ace_happy.png" id="5_g1rga"]
+[ext_resource type="Texture2D" uid="uid://drsmonlr3wnfp" path="res://Assets/Characters/Ace/ace_scared.png" id="6_3oqey"]
+[ext_resource type="Texture2D" uid="uid://mjl5mpklmbh" path="res://Assets/Characters/Ace/ace_worried.png" id="7_gl0rn"]
 
 [node name="LayeredPortrait" type="CanvasGroup"]
 script = ExtResource("1_uubi5")
@@ -19,3 +22,15 @@ texture = ExtResource("3_ees45")
 
 [node name="neutral" type="Sprite2D" parent="face"]
 texture = ExtResource("4_wy5p4")
+
+[node name="happy" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("5_g1rga")
+
+[node name="scared" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("6_3oqey")
+
+[node name="worried" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("7_gl0rn")

@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://duw2mgytifb55"]
+[gd_scene load_steps=8 format=3 uid="uid://duw2mgytifb55"]
 
 [ext_resource type="Script" uid="uid://ck1512mwlh4ap" path="res://Scenes/Characters/Tam/custom_layered_portrait.gd" id="1_uubi5"]
-[ext_resource type="Texture2D" uid="uid://cqagh8761gp2e" path="res://Assets/Characters/Tam Bai/tambai_base.png" id="2_nd8yq"]
-[ext_resource type="Texture2D" uid="uid://4o1dcri4w6yb" path="res://Assets/Characters/Tam Bai/tambai_confused.png" id="3_cbxi1"]
-[ext_resource type="Texture2D" uid="uid://cuqj77yg5jh3c" path="res://Assets/Characters/Tam Bai/tambai_happy.png" id="4_bgujh"]
+[ext_resource type="Texture2D" uid="uid://b0grfjiudau74" path="res://Assets/Characters/Tam Bai/tambai_base.png" id="2_nd8yq"]
+[ext_resource type="Texture2D" uid="uid://b0o8eukh5lrq8" path="res://Assets/Characters/Tam Bai/tambai_confused.png" id="3_cbxi1"]
+[ext_resource type="Texture2D" uid="uid://c4t6wqrxd28ne" path="res://Assets/Characters/Tam Bai/tambai_happy.png" id="4_bgujh"]
+[ext_resource type="Texture2D" uid="uid://cobrsaxyci6j6" path="res://Assets/Characters/Tam Bai/tambai_angry.png" id="5_o4k32"]
+[ext_resource type="Texture2D" uid="uid://b0y3ir5i0cirg" path="res://Assets/Characters/Tam Bai/tambai_sad.png" id="6_me3h3"]
+[ext_resource type="Texture2D" uid="uid://bnpoq5bv2px61" path="res://Assets/Characters/Tam Bai/tambai_worried.png" id="7_y5tjj"]
 
 [node name="LayeredPortrait" type="CanvasGroup"]
 script = ExtResource("1_uubi5")
@@ -19,3 +22,15 @@ texture = ExtResource("3_cbxi1")
 
 [node name="happy" type="Sprite2D" parent="face"]
 texture = ExtResource("4_bgujh")
+
+[node name="angry" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("5_o4k32")
+
+[node name="sad" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("6_me3h3")
+
+[node name="worried" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("7_y5tjj")

@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4sxyyflilgxe"]
+[gd_scene load_steps=8 format=3 uid="uid://c4sxyyflilgxe"]
 
 [ext_resource type="Script" uid="uid://gt5fgl51h7ti" path="res://Scenes/Characters/Tom Boyako/custom_layered_portrait.gd" id="1_uubi5"]
-[ext_resource type="Texture2D" uid="uid://pyt1e7amfk88" path="res://Assets/Characters/Tom Boyako/tomb_base.png" id="2_wmkxi"]
-[ext_resource type="Texture2D" uid="uid://djjfi1fahw1dl" path="res://Assets/Characters/Tom Boyako/tomb_annoyed.png" id="3_a4af3"]
-[ext_resource type="Texture2D" uid="uid://co8da72divo2p" path="res://Assets/Characters/Tom Boyako/tomb_evil.png" id="4_3rmry"]
-[ext_resource type="Texture2D" uid="uid://7htv1lkna4yi" path="res://Assets/Characters/Tom Boyako/tomb_scared.png" id="5_4paak"]
-[ext_resource type="Texture2D" uid="uid://esse02csa88n" path="res://Assets/Characters/Tom Boyako/tomb_serious.png" id="6_wrfix"]
+[ext_resource type="Texture2D" uid="uid://cgdv7rcjy6wku" path="res://Assets/Characters/Tom Boyako/tomb_base.png" id="2_wmkxi"]
+[ext_resource type="Texture2D" uid="uid://bd3ko4x1y3l88" path="res://Assets/Characters/Tom Boyako/tomb_annoyed.png" id="3_a4af3"]
+[ext_resource type="Texture2D" uid="uid://ce3unjujrolpy" path="res://Assets/Characters/Tom Boyako/tomb_evil.png" id="4_3rmry"]
+[ext_resource type="Texture2D" uid="uid://bqw7udx0d8mrc" path="res://Assets/Characters/Tom Boyako/tomb_scared.png" id="5_4paak"]
+[ext_resource type="Texture2D" uid="uid://dp6gt6f7tmtdo" path="res://Assets/Characters/Tom Boyako/tomb_serious.png" id="6_wrfix"]
+[ext_resource type="Texture2D" uid="uid://q7adrqu5cf56" path="res://Assets/Characters/Tom Boyako/tomb_happy.png" id="7_a4af3"]
 
 [node name="LayeredPortrait" type="CanvasGroup"]
 script = ExtResource("1_uubi5")
@@ -29,3 +30,7 @@ texture = ExtResource("5_4paak")
 
 [node name="serious" type="Sprite2D" parent="face"]
 texture = ExtResource("6_wrfix")
+
+[node name="happy" type="Sprite2D" parent="face"]
+visible = false
+texture = ExtResource("7_a4af3")

@@ -14,10 +14,14 @@ join Tom_Boyako center
 Tom_Boyako: {culprit}? Huh. Not who I expected. But hey, a win’s a win. Good job.
 join Koopa center
 Koopa: Ayan naman pala, . You’ve got some backbone.
+leave --All-- [animation="Fade Out"]
 label ed1_b (ed1_b)
-[background arg="res://Assets/Backgrounds/Background.png" fade="0.0"]
+[background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" fade="0.0"]
+[signal arg="day"]
 [signal arg="start_day"]
 Time to open up shop again.
+[wait time="2.0"]
+join TamBai center [extra_data="set face/worried"]
 TamBai: ...
 Oh up early today are we Tam? Anyway, here's your Coke!
 TamBai: Ace, is dead.

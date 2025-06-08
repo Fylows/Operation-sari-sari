@@ -1,7 +1,9 @@
 set {day_end} = false
 [style name="main_style"]
+[background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" fade="0.0"]
 [signal arg="start_day"]
-if {tam_sus} == 1.0:
+[signal arg="day"]
+if {tam_sus} <= 1.0:
 	join Ace center [animation="Fade In Up" wait="true"]
 	Ace: ...
 	Ay! Ace you scared me!
@@ -90,16 +92,17 @@ if {tam_sus} == 1.0:
 	Ace: One person with a motive, one person who could have been there at that time.
 	Ace: Please see through everything, please save us.
 	Ace: Find the true culprit.
-	[signal arg="tam_susBook"]
-	[end_timeline]
 else:
 	...
 	Sure is quiet today…
 	Where are my regulars?
 	[b]Unbeknownst to her, Tam and Ace were getting ready to leave.[/b]
+	[signal arg="null"]
+	[wait time="1.0"]
+	[signal arg="night"]
+	[wait time="1.0"]
 	join Ace right
 	join TamBai left
-	[signal arg="end_day"]
 	Ace: This just isn't right, Tam.
 	TamBai: What matters is that you're safe, Ace. I promised— I promised.
 	Ace: So what, we're just going to leave?
@@ -112,7 +115,7 @@ else:
 	TamBai: Please… let me honor my promise.
 	Ace: ...
 	Ace: Fine.
-	[end_timeline]
+	leave --All-- [animation="Slide Out Right" length="2.0"]
 [signal arg="end_day"]
 set {day} += 1.0
 set {day_end} = true

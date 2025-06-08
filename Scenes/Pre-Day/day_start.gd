@@ -10,8 +10,10 @@ func _on_pressed() -> void:
 	var culprit = Dialogic.VAR.culprit
 	if end == 1:
 		end = 0
-		if day == "6" || culprit != "none":
+		if day == "6":
 			Dialogic.VAR.ed = 1
+		
+		if day == "6" || culprit != "none":
 			if culprit == "Ace":
 				Dialogic.VAR.ed = 2
 			elif culprit == "Tom":

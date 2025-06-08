@@ -4,9 +4,10 @@
 Tam, you’re a good guy, and I really wanted to believe that, I really did.
 …the facts though, say otherwise.
 I’m sorry…
-[wait time="2.0"]
+[background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" arg="Background.png" fade="0.0"]
 [signal arg="start_day"]
-[background arg="res://Assets/Backgrounds/Background.png" fade="0.0"]
+[signal arg="day"]
+[wait time="2.0"]
 join TamBai center
 TamBai: Yo ! The usual coke again plea-
 Tam.
@@ -24,7 +25,9 @@ TamBai: you…
 … you idiot.
 TamBai: Forget the coke, just know…
 TamBai: You’ll regret this.
-[background arg="Tindahan_CLOSED.png" fade="0.0"]
+leave --All--
+[signal arg="end_day"]
+[signal arg="null"]
 It’s been some time since that incident, the incident that forever changed my life…
 The culprit was found out to be Tam, someone who I’d never expect to do such an awful thing.
 Shortly after, Tom commended me for my heroic effort, and offered me a generous amount of money, and a house and lot far away from that town as a reward.
@@ -32,7 +35,7 @@ Tom ended up running for Mayor, and even won the position.
 She now controls the town, and has made some great changes since then, not that it concerns me anymore of course.
 In a way, we both got our fresh start.
 The town was built anew, and I was able to leave that lower class life behind.
-That lower class life.. That I remember so fondly.
+That lower class life... That I remember so fondly.
 The people showing up everyday, and their smiling faces to the little service I can give them.
-I should be happy… but I feel oddly empty.
+I should be happy… but I feel oddly empty...
 Was I mistaken all this time?
