@@ -49,8 +49,10 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("enter") && vis == true:
 		vis = false
 		queue_redraw()
-		
-		area.visible = true
-		listahan.visible = false
-		notes.visible = true
-		button.visible = false
+		if Dialogic.VAR.day_end == true && Dialogic.VAR.day == 1:
+			Dialogic.start("preday_timeline")
+		else:
+			area.visible = true
+			listahan.visible = false
+			notes.visible = true
+			button.visible = false

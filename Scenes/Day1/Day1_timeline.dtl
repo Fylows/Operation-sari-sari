@@ -88,4 +88,5 @@ label end (end)
 [i]Maybe it’s best to close up shop for now.[/i]
 set {day} += 1.0
 [signal arg="end_day"]
+set {day_end} = true
 [end_timeline]

@@ -1,4 +1,7 @@
 [style name="main_style"]
+if {day_end} == true and {day} == 1:
+	I've already logged today.
+	[end_timeline]
 if {day} == 1.0:
 	Ugh, last night is still eating away at me, but I must not lose sight of my mission, everyone is relying on me.
 	[end_timeline]
@@ -11,7 +14,7 @@ elif {day} == 3.0:
 	Tom_Boyako: Hey, are you awake?
 	[end_timeline]
 elif {day} == 4.0:
-	Rise and shine, folks. 
+	Rise and shine, folks.
 	Everyday seems to get more and more insane…
 	[end_timeline]
 elif {day} == 5.0:

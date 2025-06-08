@@ -1,8 +1,17 @@
+[style name="main_style"]
 if {day} == 1:
-
+	Si Aceron Montenegro, anak ng pinatay.
+	The only thing I know about Ace in my years here ay tropa sila ni Tam.
+	Lagi rin siyang tahimik at mahiyain.
+	She didn't cry or said anything in her dad's funeral.
 if {day} == 2:
-
+	Nothing out of the ordinary happened yesterday with Ace.
+	They were with Tam as expected, and they went to play.
+	Ace was, as usual, quiet.
 if {day} == 3:
+	if {tam_sus} == 1:
+		
+	I hope I can talk to Ace today.
 	if {day_end} == true:
 	else:
 

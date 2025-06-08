@@ -1,8 +1,15 @@
+[style name="main_style"]
 if {day} == 1:
-
+	Si Deon Cey, ang Resident Chikadora.
+	Matagal na siyang nakatira dito, at madaldal din.
+	If its information you're after, Deon has the answers.
 if {day} == 2:
-
+	I think Deon might know something.
+	Yesterday, after buying some candy, he dropped bits of information about night lurkers and cold blooded murders.
+	Not unusual in today's world, but definitely unusual in our town.
 if {day} == 3:
+	Deon might drop more chika today.
+	I need to take note of that chikadora.
 	if {day_end} == true:
 	else:
 

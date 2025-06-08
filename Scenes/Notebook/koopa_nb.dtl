@@ -1,8 +1,13 @@
+[style name="main_style"]
 if {day} == 1:
-
+	Si Koopa Legaspi, tauhan ni Tom.
+	Nakatrabaho ko siya dati, when I was still Tom's secretary.
+	He's a power tripper.
 if {day} == 2:
-
+	I didnt see Koopa yesterday.
 if {day} == 3:
+	Agrh.
+	That was probably Tom knocking, so Koopa might be here too.
 	if {day_end} == true:
 	else:
 

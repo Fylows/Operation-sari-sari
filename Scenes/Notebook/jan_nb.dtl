@@ -1,8 +1,13 @@
+[style name="main_style"]
 if {day} == 1:
-
+	Si Jan Satabi, isa pang matagal na sa bayan.
+	He's known as the Town Drunk, suki ko ng yosi.
+	In my 13 years in this town, I've only interacted with him at most 6 times.
+	Before he was rarely seen, and now he's mostly drunk, so I can't really converse with him.
 if {day} == 2:
-
+	I didn't see Jan yesterday.
 if {day} == 3:
+	If Jan stops by today, I can only hope that he's not drunk.
 	if {day_end} == true:
 	else:
 
