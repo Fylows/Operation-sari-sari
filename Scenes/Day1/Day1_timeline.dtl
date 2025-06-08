@@ -1,6 +1,7 @@
 [style name="main_style"]
 [signal arg="start_day"]
-[background arg="bg_phd.jpg" fade="3.0" transition="Simple Fade"]
+[background arg="res://Assets/Backgrounds/Background.png" fade="0.0" transition="Simple Fade"]
+[wait time="3.0"]
 join TamBai left [animation="Slide In Left"]
 join Ace right [animation="Slide In Left" length="4.0"]
 TamBai: Yo mari! Can I get a- huh? Why the long face? Get dumped again?
@@ -24,7 +25,7 @@ TamBai: Oh woah woah look at the time! The computer shop is gonna open soon!
 Wait Tam I was jus-
 TamBai: We gotta get in there first don’t we Ace! If I miss the beanstalk seeds in stock I’m gonna lose it!
 TamBai: Anyway Mari thanks for the drinks, gotta bounce!
-[background fade="0.0"]
+leave --All--
 ...
 [i]What is up with that kid today?[/i]
 [i]Calling me strange when he’s acting even stranger.[/i]

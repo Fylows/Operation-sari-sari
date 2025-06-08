@@ -1,7 +1,8 @@
 [style name="main_style"]
 [signal arg="start_day"]
+[background fade="0.0"]
 join Tom_Boyako center
-Tom_Boyako:  Hi Mari! Just checking in on the progress before you open shop!
+Tom_Boyako: Hi Mari! Just checking in on the progress before you open shop!
 Ah Tom, what brings you here today?
 Tom_Boyako: Just here to make a small announcement...
 Tom_Boyako: I’m giving you permission to arrest any suspicious figures.
@@ -17,7 +18,7 @@ label Time passes (evening)
 join Koopa center
 Koopa: Hello! Kamusta ka, Mari?
 What are you doing here?
-Koopa: Whoa, calm down. Hinatid ko lang si boss Tom, but just because she left doesn’t mean I have to. 
+Koopa: Whoa, calm down. Hinatid ko lang si boss Tom, but just because she left doesn’t mean I have to.
 Koopa: Thought I'd stop by to have a chat with a colleague!
 ...
 Koopa: You sure are taking your time.
@@ -26,19 +27,125 @@ Koopa: Akala ko ba magaling ka? Where’s that bravado?
 I didn’t say anything like that. And besides, the closest I’ve gotten is–
 Koopa: Save it for later. I think we have a lead.
 ?
- Guess who I saw lurking around last night?
-join  center
+Guess who I saw lurking around last night?
+join Jan center
 update Koopa
-Good evening, boss
-Jan:  M… Ma…
-Marlboro na naman ba?
-Jan: Mmm…
-Koopa: Ahem. 
-Koopa: I think I must take my leave, I’ll see you soon, Mari.
-Jan: And Jan, don’t drink too much please, I don’t want to keep you in custody again like last time.
-leave Koopa
-Jan: Ahem, boss, can I ask…
-<Empty Text Event>
+Good morning, boss.
+Jan: M… Ma…
+Marlboro nanaman ba?
+Jan: Mhmm
+- Tell Jan to go away
+	Pwedeng mamaya na Boss? we're having a discussion here.
+	Jan: Hngg...
+	leave Jan
+	update Koopa
+	Koopa: God, what does it take to get some privacy here.
+	Koopa: As I was saying…
+	That kid who hangs out with Ace?
+	Who– Tam?!
+	Yes, Tam. Right. He’s trouble, Mari. I tell you.
+	Sources tell me that he’s the leader of [REDACTED], and is somehow involved with the case.
+	Tam… that doesn’t sound right...
+	Sure he didn’t finish college, but I don’t think Tam is that kind of person…
+	Just telling you Mari, its hard to trust anyone nowadays.
+	Anyways, I have to go.
+	See you soon, Mari.
+- Give him a cigarette
+	set {jan_sus} += 1.0
+	set {tam_sus} += 1.0
+	set {deon_sus} += 1.0
+	Koopa: Ahem. I think I must take my leave, I’ll see you soon, Mari.
+	Koopa: And Jan, don’t drink too much please, I don’t want to keep you in custody again [i]like last time[i].
+	Ahem, boss, can I ask…
+	The last time you were here, you mentioned something about Ace’s father…
+	Jan: Ah… hahaha...
+	…did you know him?
+	Jan: Kasama ko ‘yon… noon…
+	…
+	Too proud… look where it got him…
+	?!
+	join "Deon Cey" center
+	update Jan
+	"Deon Cey": Hi mga mamsh, Good morning ulet!
+	"Deon Cey": Wow, manong over sa lung cancer ah
+	"Deon Cey": Already out for a smoke this early?
+	Buti di ka pa natetegi
+	Jan: ?!
+	"Deon Cey": Charez lang oh di mabiro si adik
+	"Deon Cey": Anyways, isang 3-in-1 for me!
+	…
+	"Deon Cey": O, tulala ka na naman.
+	"Deon Cey": [i]Would Deon know anything? Should I ask?[i]
+	Ah, si Manong Jan kasi…
+	he mentioned knowing Ace’s father.
+	"Deon Cey": Ay sus! Marites ka lang pala. Aba oo! it was no secret that they used to work together.
+	[font_size=20]And… it was also no secret that they were in [b][REDACTED][b], and Jan got kicked out because of… unsavory behavior.[/font_size]
+	[font_size=20] [b][REDACTED]?[b] Isn’t that…[/font_size]
+	An activist group? Yeah…
+	…wh–
+	Nasaan na ba ang kape ko, maem?
+	Over sa tagal ah!
+	I wasn’t–
+	"Deon Cey": Hey. Enough with the questions. Chika will have to wait, okay? Kape is now.
+	label QTE Kape (QTE Kape)
+	if {qte} == false:
+		Hayst... wag na nga mamshie over ka sa think!
+	else:
+		"Deon Cey": Thanks! luv u mwa!
+	"Deon Cey": Anyway, nabalitaan ko dumaan si Ms. Boyako kanina?
+	Ah, yeah. Wait, that was only a few minutes ago. What do you mean, “nabalitaan”?
+	Word of mouth flies fast girlypop!
+	But Ms. Boyako huh…
+	She’s been out and about ever since, the [i]you know what[i] incident.
+	Well I guess that makes sense, the activist party is out of the picture…
+	And may plus points din siya if she happens to find the culprit to this all.
+	Thats...
+	How do you know so much about [REDACTED] anyway?
+	Like I said, enough with the questions.
+	...
+	Si Tam tanungin mo.
+	Bounce na’ko, madam. Kape, here I go go go!
+	Deon, wait-
+	leave "Deon Cey"
+	It always surprises me how much Deon knows…
+Tam again huh?
+He has connections to [b][REDACTED] [b]?
+if {jan_sus} == 0.0:
+	join Jan center
+else:
+	update Jan
+Jan: HA! Si Tam… lokong bata ‘yan…
+Tam again huh?
+Tam has connections to [b][REDACTED][b] ?
+Jan: HA! Si Tam… lokong bata ‘yan…
+O, Manong Jan, kaya mo pa ba?
+Jan: Mag-ingat ka, iha. Asking questions, nosing around– that’s exactly what got him killed.
+?!
+Jan: Baka ikaw na sumunod…
+What are you…
+Jan: Don’t get too carried away. 
+…
+Jan: Tam blames me for everything– kasalanan ko bang tanga siya? He practically walked into the knife…
+Is that… a confession?
+Jan: I didn’t do anything, alright? The call– it was never me.
+A call?
+Jan: Tam blames me– tells that I called the old man that night, told him to meet me. 
+…
+And did you?
+Jan: What? … No. I– I was…
+…
+I was passed out cold, in some godforsaken corner of this town.
+Do you remember anything that happened that night?
+Jan: No! No… but it wasn’t me, I swear– I– I couldn’t have… not me… not me– 
+Jan, calm down—
+Jan: It wasn’t me! It wasn’t me, wasn’t me, wasn’t me–
+Jan–
+Jan: But it might as well have been me, right? I– he was my friend! And look where that got him…
+Jan… you’re not making sense. 
+Jan: You think I wanted this– that I wanted him dead? He– he was my only friend, and I just– I can’t…
+Jan: Tam said– Tam said there was a call, that it was me. But it couldn’t have been me– or was it? I don’t– I don’t know…
+Jan: Help me– PLEASE! It wasn’t me! Wasn’t me, wasn’t me, w–
 [signal arg="end_day"]
 set {day} += 1.0
 set {d3_e} = true
+[signal]
