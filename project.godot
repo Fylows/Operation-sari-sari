@@ -39,6 +39,9 @@ directories/dtl_directory={
 "Day5_timeline": "res://Scenes/Day5/Day5_timeline.dtl",
 "ace_nb": "res://Scenes/Notebook/ace_nb.dtl",
 "deon_nb": "res://Scenes/Notebook/deon_nb.dtl",
+"ed1_timeline": "res://Scenes/Endings/ed1_timeline.dtl",
+"ed2_timeline": "res://Scenes/Endings/ed2_timeline.dtl",
+"ed3_timeline": "res://Scenes/Endings/ed3_timeline.dtl",
 "jan_nb": "res://Scenes/Notebook/jan_nb.dtl",
 "koopa_nb": "res://Scenes/Notebook/koopa_nb.dtl",
 "preday_timeline": "res://preday_timeline.dtl",
@@ -47,13 +50,11 @@ directories/dtl_directory={
 layout/style_list=["res://Scenes/main_style.tres"]
 layout/default_style="res://Scenes/Day0/Day_0_Style.tres"
 variables={
-"d1_e": false,
-"d2_e": false,
-"d3_e": false,
-"d4_e": false,
-"d5_e": false,
-"day": 0,
+"culprit": "none",
+"day": 5,
+"day_end": false,
 "deon_sus": 0,
+"ed": 0,
 "jan_sus": 0,
 "koopa_sus": 0,
 "qte": false,
@@ -86,7 +87,7 @@ text/autopauses={}
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/resizable=false
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

@@ -7,9 +7,19 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	var day = str(int(Dialogic.VAR.day))
+	var culprit = Dialogic.VAR.culprit
 	if end == 1:
 		end = 0
-		get_tree().change_scene_to_file("res://Scenes/Day"+day+"/Day"+day+".tscn")
+		if day == "6" || culprit != "none":
+			Dialogic.VAR.ed = 1
+			if culprit == "Ace":
+				Dialogic.VAR.ed = 2
+			elif culprit == "Tom":
+				Dialogic.VAR.ed = 3
+			get_tree().change_scene_to_file(	"res://Scenes/Endings/endings.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/Day"+day+"/Day"+day+".tscn")
+		
 	else:
 		day = str(int(Dialogic.VAR.day))
 		Dialogic.start("Day"+day+"_timeline")

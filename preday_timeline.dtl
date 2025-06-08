@@ -6,13 +6,16 @@ elif {day} == 2.0:
 	Another day huh… hopefully today I find more leads.
 	[end_timeline]
 elif {day} == 3.0:
-	one more day…
+	two days left…
 	[b] KNOCK KNOCK KNOCK [b]
 	Tom_Boyako: Hey, are you awake?
 	[end_timeline]
 elif {day} == 4.0:
-	DAY 4 BITCH
+	Rise and shine, folks. 
+	Everyday seems to get more and more insane…
 	[end_timeline]
 elif {day} == 5.0:
-	END WOW DAY 5
+	I feel more and more lost every day…
+	…
+	Time to open up shop.
 	[end_timeline]

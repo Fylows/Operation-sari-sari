@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctfctoongwc6h"]
+
+[ext_resource type="Script" uid="uid://c0xrk84ahv2eq" path="res://Scenes/Endings/endings.gd" id="1_bavrn"]
+
+[node name="Day6" type="Node2D"]
+script = ExtResource("1_bavrn")

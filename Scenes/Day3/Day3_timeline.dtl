@@ -1,6 +1,8 @@
+set {day_end} = false
+jump end
 [style name="main_style"]
 [signal arg="start_day"]
-[background fade="0.0"]
+[background arg="res://Assets/Backgrounds/Background.png" fade="0.0"]
 join Tom_Boyako center
 Tom_Boyako: Hi Mari! Just checking in on the progress before you open shop!
 Ah Tom, what brings you here today?
@@ -75,12 +77,12 @@ Jan: Mhmm
 	"Deon Cey": Anyways, isang 3-in-1 for me!
 	…
 	"Deon Cey": O, tulala ka na naman.
-	"Deon Cey": [i]Would Deon know anything? Should I ask?[i]
+	"Deon Cey": [i]Would Deon know anything? Should I ask?[/i]
 	Ah, si Manong Jan kasi…
 	he mentioned knowing Ace’s father.
 	"Deon Cey": Ay sus! Marites ka lang pala. Aba oo! it was no secret that they used to work together.
-	[font_size=20]And… it was also no secret that they were in [b][REDACTED][b], and Jan got kicked out because of… unsavory behavior.[/font_size]
-	[font_size=20] [b][REDACTED]?[b] Isn’t that…[/font_size]
+	[font_size=20]And… it was also no secret that they were in [/b][REDACTED][b], and Jan got kicked out because of… unsavory behavior.[/font_size]
+	[font_size=20] [b][REDACTED]?[/b] Isn’t that… [/font_size]
 	An activist group? Yeah…
 	…wh–
 	Nasaan na ba ang kape ko, maem?
@@ -92,15 +94,16 @@ Jan: Mhmm
 		Hayst... wag na nga mamshie over ka sa think!
 	else:
 		"Deon Cey": Thanks! luv u mwa!
+	set {qte} = false
 	"Deon Cey": Anyway, nabalitaan ko dumaan si Ms. Boyako kanina?
 	Ah, yeah. Wait, that was only a few minutes ago. What do you mean, “nabalitaan”?
 	Word of mouth flies fast girlypop!
 	But Ms. Boyako huh…
-	She’s been out and about ever since, the [i]you know what[i] incident.
+	She’s been out and about ever since, the [i]you know what[/i] incident.
 	Well I guess that makes sense, the activist party is out of the picture…
 	And may plus points din siya if she happens to find the culprit to this all.
 	Thats...
-	How do you know so much about [REDACTED] anyway?
+	How do you know so much about [b][REDACTED][/b] anyway?
 	Like I said, enough with the questions.
 	...
 	Si Tam tanungin mo.
@@ -109,43 +112,85 @@ Jan: Mhmm
 	leave "Deon Cey"
 	It always surprises me how much Deon knows…
 Tam again huh?
-He has connections to [b][REDACTED] [b]?
+He has connections to [b][REDACTED] [/b]?
 if {jan_sus} == 0.0:
 	join Jan center
 else:
 	update Jan
 Jan: HA! Si Tam… lokong bata ‘yan…
 Tam again huh?
-Tam has connections to [b][REDACTED][b] ?
+Tam has connections to [b][REDACTED][/b] ?
 Jan: HA! Si Tam… lokong bata ‘yan…
 O, Manong Jan, kaya mo pa ba?
 Jan: Mag-ingat ka, iha. Asking questions, nosing around– that’s exactly what got him killed.
 ?!
 Jan: Baka ikaw na sumunod…
 What are you…
-Jan: Don’t get too carried away. 
+Jan: Don’t get too carried away.
 …
 Jan: Tam blames me for everything– kasalanan ko bang tanga siya? He practically walked into the knife…
 Is that… a confession?
 Jan: I didn’t do anything, alright? The call– it was never me.
 A call?
-Jan: Tam blames me– tells that I called the old man that night, told him to meet me. 
+Jan: Tam blames me– tells that I called the old man that night, told him to meet me.
 …
 And did you?
 Jan: What? … No. I– I was…
 …
 I was passed out cold, in some godforsaken corner of this town.
 Do you remember anything that happened that night?
-Jan: No! No… but it wasn’t me, I swear– I– I couldn’t have… not me… not me– 
+Jan: No! No… but it wasn’t me, I swear– I– I couldn’t have… not me… not me–
 Jan, calm down—
 Jan: It wasn’t me! It wasn’t me, wasn’t me, wasn’t me–
 Jan–
 Jan: But it might as well have been me, right? I– he was my friend! And look where that got him…
-Jan… you’re not making sense. 
+Jan… you’re not making sense.
 Jan: You think I wanted this– that I wanted him dead? He– he was my only friend, and I just– I can’t…
 Jan: Tam said– Tam said there was a call, that it was me. But it couldn’t have been me– or was it? I don’t– I don’t know…
 Jan: Help me– PLEASE! It wasn’t me! Wasn’t me, wasn’t me, w–
+label QTE Pin (QTE Pin)
+if {qte} == false:
+	set {tam_sus} += 2.0
+	Manong– sigh You’re clearly not well. But I believe you.
+	Jan: …
+	Jan: …you do?
+	Yes. Now please, calm down.
+	I’ll let this slide for now, but you’re not completely off the hook. I’ll take your testimony into account.
+	Now…
+	What did you say about Tam?
+	Jan: He’s involved…
+	…
+	Jan: Magaling magtago yung bata, but he’s involved… hah ha.
+	Involved in what way..?
+	Jan: He’s.. hah… cough
+	Jan: [b] cough COUGH COUGH [/b]
+	Manong!  what did you do?!
+	Tam! You-
+	I said what did you do, ?!
+	Nothing! I-
+	…He started grabbing me so I just-
+	Manong Jan is old ! You know he has weak lungs!
+	He can’t handle rough activity like he used to, you should know that!
+	Tam wait! I have somethi-
+	Save it. I’m taking Manong Jan with me to help him recover.
+	Just stay put there, I’ll handle it myself…
+else:
+	set {jan_sus} += 2.0
+	Jan: PLESAE FORGIVE ME. I JUST WANTED HIM TO LEAVE AND BE SAFE. PLEASE PLEASE PLEASE PELAS PELASEPLASEPLS
+	
+	…What… Happened?
+	Manong Jan had another one of his crash outs, and this time, you were the target.
+	What happened, is he okay?
+	Yeah your buddy Koopa dragged him over to the barangay.
+	What even lead to that?
+	I dont really know… One second he was shouting “Im sorry” and the next he was choking me.
+	Yeah… I wonder if… that also happened with…
+	With?
+	Oh its nothing. Never mind…
+	I… have to go now… have  good night .
+set {qte} = false
+label end (end)
+Tam…
 [signal arg="end_day"]
 set {day} += 1.0
-set {d3_e} = true
-[signal]
+set {day_end} = true

@@ -1,1 +1,9 @@
-This is Janice "Ace" Kalderon
+if {day_end} == true:
+	Should I arrest them?
+	- yes
+		set {culprit} = "Ace"
+	- no
+		That doesnt seem quite right...
+		set {culprit} = "none"
+else:
+	This is Janice "Ace" Kalderon

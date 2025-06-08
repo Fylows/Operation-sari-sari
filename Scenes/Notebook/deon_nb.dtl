@@ -1,1 +1,8 @@
 This is Deon Cey.
+if {day_end} == true:
+	Should I arrest Deon?
+	- yes
+		set {culprit} = "Deon"
+	- no
+		It cant be Deon.
+		set {culprit} = "none"

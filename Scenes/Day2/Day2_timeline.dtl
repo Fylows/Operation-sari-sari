@@ -143,5 +143,4 @@ label end (end)
 [i]What was that?[/i]
 set {day} += 1.0
 [signal arg="end_day"]
-set {d2_e} = true
 [end_timeline]
