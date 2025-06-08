@@ -8,9 +8,10 @@ if {day} == 2:
 	Nothing out of the ordinary happened yesterday with Ace.
 	They were with Tam as expected, and they went to play.
 	Ace was, as usual, quiet.
+	if {day_end} == true:
+		Didn't say much beyond a few hellos, but looked unnerved when Junjun's mentioned her father's death.
 if {day} == 3:
 	if {tam_sus} == 1:
-		
 	I hope I can talk to Ace today.
 	if {day_end} == true:
 	else:

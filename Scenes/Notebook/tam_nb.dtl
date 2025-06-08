@@ -4,8 +4,10 @@ if {day} == 1:
 	Ever since I arrived in this town, he's always been close with Ace's family.
 	For a while I thought they were siblings.
 if {day} == 2:
-	Tam dropped by in the morning with Ace, as if it's routine.
+	Yesterday, Tam dropped by in the morning with Ace, as if it was routine.
 	Bought his usual bottle of coke, and one for Ace.
+	if {day_end} == 1:
+		
 if {day} == 3:
 	I'm sure Tam knows something.
 	if {day_end} == true:

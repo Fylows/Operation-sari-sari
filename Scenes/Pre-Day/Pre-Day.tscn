@@ -1,17 +1,18 @@
-[gd_scene load_steps=24 format=3 uid="uid://bojim1cxoxcip"]
+[gd_scene load_steps=25 format=3 uid="uid://bojim1cxoxcip"]
 
 [ext_resource type="Script" uid="uid://cb1ov43it3fvx" path="res://Scenes/Pre-Day/pre_day.gd" id="1_5kk28"]
-[ext_resource type="Texture2D" uid="uid://br5lga8ug63to" path="res://Assets/Backgrounds/Tindahan_CLOSED_noValiant.png" id="2_kyykf"]
+[ext_resource type="Texture2D" uid="uid://bbhmx0npppdkg" path="res://Assets/Backgrounds/Tindahan_CLOSED.png" id="2_kyykf"]
 [ext_resource type="Texture2D" uid="uid://c1ybhasq575ce" path="res://Assets/Items/listahan.png" id="3_wendk"]
 [ext_resource type="Script" uid="uid://dj0wbu1wuy7uq" path="res://Scenes/Pre-Day/listahan.gd" id="4_npyhy"]
 [ext_resource type="Script" uid="uid://dh725w266r5ba" path="res://Scenes/Pre-Day/day_start.gd" id="5_8xfpq"]
-[ext_resource type="Texture2D" uid="uid://cktopypck1wft" path="res://Assets/Items/record_book.png" id="6_kyykf"]
+[ext_resource type="Texture2D" uid="uid://ck4ukunpnf6ug" path="res://Assets/Items/recbook_tom.png" id="7_kyykf"]
 [ext_resource type="Script" uid="uid://c585uie58f7ri" path="res://Scenes/Pre-Day/notebook.gd" id="7_tcj3e"]
 [ext_resource type="Script" uid="uid://257rxww5gcxm" path="res://Scenes/Pre-Day/nb_chars/ace_nb.gd" id="8_sg8gv"]
 [ext_resource type="Script" uid="uid://bli70xvqt5e5m" path="res://Scenes/Pre-Day/nb_chars/tam_nb.gd" id="9_kyykf"]
 [ext_resource type="Script" uid="uid://brj58wkwya5xa" path="res://Scenes/Pre-Day/nb_chars/deon_nb.gd" id="10_tcj3e"]
 [ext_resource type="Script" uid="uid://gbce6ebe6mrx" path="res://Scenes/Pre-Day/nb_chars/jan_nb.gd" id="11_xjedd"]
 [ext_resource type="Script" uid="uid://dhmp0r1ypspvl" path="res://Scenes/Pre-Day/nb_chars/koopa_nb.gd" id="12_qjbf2"]
+[ext_resource type="Script" uid="uid://dlaibviu302j6" path="res://Scenes/Pre-Day/tom.gd" id="13_tcj3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atbon"]
 size = Vector2(147.5, 211.25)
@@ -29,22 +30,22 @@ size = Vector2(363.333, 69.6667)
 size = Vector2(357.667, 31.3334)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kk28"]
-size = Vector2(37.6667, 29.3333)
+size = Vector2(75.6667, 66.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyykf"]
-size = Vector2(57.6667, 36.3333)
+size = Vector2(70, 69.6667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcj3e"]
-size = Vector2(48.5, 51)
+size = Vector2(69.9167, 64.1667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjedd"]
-size = Vector2(81, 66.3333)
+size = Vector2(64.6667, 66.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjbf2"]
-size = Vector2(73, 28.3333)
+size = Vector2(73, 65.1666)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wffjy"]
-size = Vector2(45.3333, 57.3333)
+size = Vector2(74.3333, 69.3333)
 
 [node name="Pre-Day" type="Node2D"]
 script = ExtResource("1_5kk28")
@@ -127,52 +128,53 @@ shape = SubResource("RectangleShape2D_8xfpq")
 visible = false
 position = Vector2(1182, 475)
 scale = Vector2(3, 3)
-texture = ExtResource("6_kyykf")
+texture = ExtResource("7_kyykf")
 
-[node name="C1" type="Area2D" parent="CanvasLayer/Notes"]
+[node name="ace" type="Area2D" parent="CanvasLayer/Notes"]
 script = ExtResource("8_sg8gv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C1"]
-position = Vector2(-204.167, -91)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/ace"]
+position = Vector2(-155.167, -60.5)
 shape = SubResource("RectangleShape2D_5kk28")
 debug_color = Color(0.85692, 0.249775, 0.671723, 0.42)
 
-[node name="C2" type="Area2D" parent="CanvasLayer/Notes"]
+[node name="tam" type="Area2D" parent="CanvasLayer/Notes"]
 script = ExtResource("9_kyykf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C2"]
-position = Vector2(-192.5, -23)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/tam"]
+position = Vector2(-205, 21.5)
 shape = SubResource("RectangleShape2D_kyykf")
 debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
 
-[node name="C3" type="Area2D" parent="CanvasLayer/Notes"]
+[node name="deon" type="Area2D" parent="CanvasLayer/Notes"]
 script = ExtResource("10_tcj3e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C3"]
-position = Vector2(-200.25, 48.6667)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/deon"]
+position = Vector2(-92.625, 92.25)
 shape = SubResource("RectangleShape2D_tcj3e")
 debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
 
-[node name="C4" type="Area2D" parent="CanvasLayer/Notes"]
+[node name="dan" type="Area2D" parent="CanvasLayer/Notes"]
 script = ExtResource("11_xjedd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C4"]
-position = Vector2(15.8333, -71)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/dan"]
+position = Vector2(-23.6667, -58.6667)
 shape = SubResource("RectangleShape2D_xjedd")
 debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
 
-[node name="C5" type="Area2D" parent="CanvasLayer/Notes"]
+[node name="koopa" type="Area2D" parent="CanvasLayer/Notes"]
 script = ExtResource("12_qjbf2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C5"]
-position = Vector2(26.6667, -2.33333)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/koopa"]
+position = Vector2(19.3333, 27.75)
 shape = SubResource("RectangleShape2D_qjbf2")
 debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
 
-[node name="C6" type="Area2D" parent="CanvasLayer/Notes"]
+[node name="tom" type="Area2D" parent="CanvasLayer/Notes"]
+script = ExtResource("13_tcj3e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/C6"]
-position = Vector2(32, 66)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Notes/tom"]
+position = Vector2(-91.8333, 15.6667)
 shape = SubResource("RectangleShape2D_wffjy")
 debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
 
@@ -181,8 +183,9 @@ debug_color = Color(0.858824, 0.25098, 0.670588, 0.419608)
 [connection signal="mouse_exited" from="CanvasLayer/Area2D" to="CanvasLayer/Area2D" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
 [connection signal="input_event" from="CanvasLayer/Area2D2" to="CanvasLayer/Area2D2" method="_on_input_event"]
-[connection signal="input_event" from="CanvasLayer/Notes/C1" to="CanvasLayer/Notes/C1" method="_on_input_event"]
-[connection signal="input_event" from="CanvasLayer/Notes/C2" to="CanvasLayer/Notes/C2" method="_on_input_event"]
-[connection signal="input_event" from="CanvasLayer/Notes/C3" to="CanvasLayer/Notes/C3" method="_on_input_event"]
-[connection signal="input_event" from="CanvasLayer/Notes/C4" to="CanvasLayer/Notes/C4" method="_on_input_event"]
-[connection signal="input_event" from="CanvasLayer/Notes/C5" to="CanvasLayer/Notes/C5" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/ace" to="CanvasLayer/Notes/ace" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/tam" to="CanvasLayer/Notes/tam" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/deon" to="CanvasLayer/Notes/deon" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/dan" to="CanvasLayer/Notes/dan" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/koopa" to="CanvasLayer/Notes/koopa" method="_on_input_event"]
+[connection signal="input_event" from="CanvasLayer/Notes/tom" to="CanvasLayer/Notes/tom" method="_on_input_event"]
