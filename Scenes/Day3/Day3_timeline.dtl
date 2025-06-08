@@ -41,7 +41,7 @@ Jan: Mhmm
 - Tell Jan to go away
 	Pwedeng mamaya na Boss? we're having a discussion here.
 	Jan: Hngg...
-	leave Jan
+	update Jan
 	update Koopa
 	Koopa: God, what does it take to get some privacy here.
 	Koopa: As I was saying…
@@ -115,10 +115,7 @@ Jan: Mhmm
 	It always surprises me how much Deon knows…
 Tam again huh?
 He has connections to [b][REDACTED] [/b]?
-if {jan_sus} == 0.0:
-	join Jan center
-else:
-	update Jan
+update Jan
 Jan: HA! Si Tam… lokong bata ‘yan…
 Tam again huh?
 Tam has connections to [b][REDACTED][/b] ?
@@ -150,9 +147,10 @@ Jan… you’re not making sense.
 Jan: You think I wanted this– that I wanted him dead? He– he was my only friend, and I just– I can’t…
 Jan: Tam said– Tam said there was a call, that it was me. But it couldn’t have been me– or was it? I don’t– I don’t know…
 Jan: Help me– PLEASE! It wasn’t me! Wasn’t me, wasn’t me, w–
-label QTE Pin (QTE Pin)
-if {qte} == false:
+
+- Fight back
 	set {tam_sus} += 2.0
+	[i] I gave manong Jan a good slap [/i]
 	Manong– sigh You’re clearly not well. But I believe you.
 	Jan: …
 	Jan: …you do?
@@ -176,21 +174,20 @@ if {qte} == false:
 	Tam wait! I have somethi-
 	Save it. I’m taking Manong Jan with me to help him recover.
 	Just stay put there, I’ll handle it myself…
-else:
+- Dont fight back
 	set {jan_sus} += 2.0
 	Jan: PLESAE FORGIVE ME. I JUST WANTED HIM TO LEAVE AND BE SAFE. PLEASE PLEASE PLEASE PELAS PELASEPLASEPLS
-	
 	…What… Happened?
-	Manong Jan had another one of his crash outs, and this time, you were the target.
+	join TamBai
+	TamBai: Manong Jan had another one of his crash outs, and this time, you were the target.
 	What happened, is he okay?
-	Yeah your buddy Koopa dragged him over to the barangay.
-	What even lead to that?
+	TamBai: Yeah your buddy Koopa dragged him over to the barangay.
+	TamBai: What even lead to that?
 	I dont really know… One second he was shouting “Im sorry” and the next he was choking me.
-	Yeah… I wonder if… that also happened with…
+	TamBai: Yeah… I wonder if… that also happened with…
 	With?
 	Oh its nothing. Never mind…
-	I… have to go now… have  good night .
-set {qte} = false
+	TamBai: I… have to go now… have a good night .
 label end (end)
 Tam…
 [signal arg="end_day"]
