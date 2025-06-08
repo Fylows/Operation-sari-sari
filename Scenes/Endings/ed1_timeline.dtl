@@ -1,11 +1,17 @@
 [style name="main_style"]
-
-
-if {day}  >  5.0 && {culprit} != "none":
-	jump ed1_b
+if {day}  > 5.0:
+	if {culprit} == "none":
+		join Tom_Boyako center
+		Tom_Boyako: Huh. So no one was suspicious enough for you to arrest them?
+		Tom_Boyako: Regardless. I've managed fine without you.
+		Tom_Boyako: Lets go Koopa.
+		jump ed1_b
+	elif {culprit} != "none":
+		jump ed1_a
+label ed1_a (ed1_a)
 [background fade="0.0"]
 join Tom_Boyako center
-{culprit}? Huh. Not who I expected. But hey, a win’s a win. Good job.
+Tom_Boyako: {culprit}? Huh. Not who I expected. But hey, a win’s a win. Good job.
 join Koopa center
 Koopa: Ayan naman pala, . You’ve got some backbone.
 label ed1_b (ed1_b)
