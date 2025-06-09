@@ -52,6 +52,8 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		if Dialogic.VAR.day_end == true && Dialogic.VAR.day == 1:
 			Dialogic.start("preday_timeline")
 		else:
+			if Dialogic.VAR.day >= 3 && Dialogic.VAR.day_end == true: 
+				Dialogic.start("arrest_day_end_timeline")
 			area.visible = true
 			listahan.visible = false
 			notes.visible = true

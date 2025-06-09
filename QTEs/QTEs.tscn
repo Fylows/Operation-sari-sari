@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://djn840s4gnc1x"]
+[gd_scene load_steps=16 format=3 uid="uid://djn840s4gnc1x"]
 
 [ext_resource type="Script" uid="uid://cj8n1le75h80b" path="res://QTEs/Connector.gd" id="1_r4ra8"]
 [ext_resource type="Script" uid="uid://brpemajcen3an" path="res://QTEs/Day1_QTE.gd" id="2_4vc0q"]
@@ -7,13 +7,20 @@
 [ext_resource type="PackedScene" uid="uid://x5uya6gpvdxi" path="res://QTEs/sparkle.tscn" id="5_r4ra8"]
 [ext_resource type="Script" uid="uid://yoxqv6u3hd7i" path="res://QTEs/QTE_Area.gd" id="5_v0cfw"]
 [ext_resource type="Script" uid="uid://q066s3a6drpt" path="res://QTEs/Day2_QTE.gd" id="6_v0cfw"]
+[ext_resource type="FontFile" uid="uid://be23ierslyx2i" path="res://addons/dialogic/Example Assets/Fonts/diario-de-andy-font/DiarioDeAndy-L3ADy.otf" id="8_6uafk"]
 [ext_resource type="Script" uid="uid://cdj2caid437fh" path="res://QTEs/QTE_Area2.gd" id="8_f7hwm"]
+[ext_resource type="Script" uid="uid://c662cucsaxivu" path="res://QTEs/Day3_QTE.gd" id="9_k5ssa"]
+[ext_resource type="Script" uid="uid://b2lmwvq02fl0a" path="res://QTEs/QTE_Area3.gd" id="10_des41"]
+[ext_resource type="FontFile" uid="uid://bq4bchrgwjg11" path="res://addons/dialogic/Example Assets/Fonts/Minecraft.ttf" id="12_scvce"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22qm2"]
 size = Vector2(377, 185)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0cfw"]
 size = Vector2(91.5, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_des41"]
+size = Vector2(224, 210)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -56,22 +63,26 @@ script = ExtResource("2_4vc0q")
 
 [node name="WTD" type="Label" parent="QTE Day 1"]
 visible = false
-offset_left = 1483.0
-offset_top = 582.0
-offset_right = 1677.0
-offset_bottom = 614.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 594.0
+offset_top = 836.0
+offset_right = 796.0
+offset_bottom = 868.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Click the candy!"
+theme_override_fonts/font = ExtResource("8_6uafk")
+theme_override_font_sizes/font_size = 30
+text = "Give their order!"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="QTE Day 1"]
 visible = false
-offset_left = 1499.0
-offset_top = 615.0
-offset_right = 1539.0
-offset_bottom = 638.0
+offset_left = 550.0
+offset_top = 775.0
+offset_right = 1280.0
+offset_bottom = 980.0
+theme_override_fonts/font = ExtResource("12_scvce")
+theme_override_font_sizes/font_size = 150
+horizontal_alignment = 1
 
 [node name="Area2D" type="Area2D" parent="QTE Day 1"]
 visible = false
@@ -93,10 +104,13 @@ script = ExtResource("6_v0cfw")
 
 [node name="Label" type="Label" parent="QTE Day 2"]
 visible = false
-offset_left = 422.0
-offset_top = 731.0
-offset_right = 701.0
-offset_bottom = 754.0
+offset_left = 550.0
+offset_top = 775.0
+offset_right = 1280.0
+offset_bottom = 925.0
+theme_override_fonts/font = ExtResource("12_scvce")
+theme_override_font_sizes/font_size = 150
+horizontal_alignment = 1
 
 [node name="Area2D" type="Area2D" parent="QTE Day 2"]
 visible = false
@@ -110,6 +124,36 @@ shape = SubResource("RectangleShape2D_v0cfw")
 visible = false
 position = Vector2(504, 782)
 
+[node name="QTE Day 3" type="CanvasLayer" parent="."]
+script = ExtResource("9_k5ssa")
+
+[node name="Area2D" type="Area2D" parent="QTE Day 3"]
+visible = false
+script = ExtResource("10_des41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QTE Day 3/Area2D"]
+position = Vector2(353, 102)
+shape = SubResource("RectangleShape2D_des41")
+
+[node name="Label" type="Label" parent="QTE Day 3"]
+visible = false
+custom_minimum_size = Vector2(730, 150)
+offset_left = 535.0
+offset_top = 775.0
+offset_right = 1265.0
+offset_bottom = 925.0
+theme_override_fonts/font = ExtResource("12_scvce")
+theme_override_font_sizes/font_size = 150
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="QTE Day 3"]
+
+[node name="Sparkle" parent="QTE Day 3" instance=ExtResource("5_r4ra8")]
+visible = false
+position = Vector2(462, 196)
+
 [connection signal="input_event" from="QTE Day 1/Area2D" to="QTE Day 1/Area2D" method="_on_input_event"]
 [connection signal="mouse_entered" from="QTE Day 1/Area2D" to="QTE Day 1/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="QTE Day 2/Area2D" to="QTE Day 2/Area2D" method="_on_mouse_entered"]
+[connection signal="input_event" from="QTE Day 3/Area2D" to="QTE Day 3/Area2D" method="_on_input_event"]
+[connection signal="mouse_entered" from="QTE Day 3/Area2D" to="QTE Day 3/Area2D" method="_on_mouse_entered"]

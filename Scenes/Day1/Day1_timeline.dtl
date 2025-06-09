@@ -1,10 +1,11 @@
 [style name="main_style"]
 [signal arg="start_day"]
+[music path="res://Assets/SFX/morning_ambiance.wav" channel="1" fade="0.5" volume="-10.0"]
 [background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" fade="0.0" transition="Simple Fade"]
 [signal arg="day"]
-[wait time="3.0"]
-join TamBai left [animation="Slide In Left"]
-join Ace right [animation="Slide In Left" length="4.0"]
+[wait time="2.5"]
+join TamBai left [length="0.6" wait="true"]
+join Ace right [length="0.7" wait="true"]
 TamBai: Yo mari! Can I get a- huh? Why the long face? Get dumped again?
 Ah, it’s nothing. don’t worry about it, anyway what can I get you?
 TamBai: Huh weird, you usually go all feral when I tease you about your exes, anyway it doesn’t matter.
@@ -46,6 +47,7 @@ if {qte} == false:
 else:
 	Children: YAYYY TENKU PO
 set {qte} = false
+join "Deon Cey" center
 "Deon Cey": May I have 10 pieces of candy too?
 Alright hold on, Just have to- HUH?
 "Deon Cey": Good morning to you too Mari.
@@ -81,12 +83,12 @@ It’s about Ace isn’t it?
 Yeah, but ho-
 "Deon Cey": Like I said, you can’t hide anything from me, no matter how hard you try.
 "Deon Cey": Anyways, thanks for the candy girl, baboosh.
+leave "Deon Cey"
 ...
 [i] That… was a bit much.[/i]
 [i]It’s still early but I may need some time to think about all this for myself.[/i]
 label end (end)
 [i]Maybe it’s best to close up shop for now.[/i]
-set {day} += 1.0
 [signal arg="end_day"]
 set {day_end} = true
 [end_timeline]

@@ -1,2 +1,6 @@
 [style name="main_style"]
-Skibidi toiler
+It cant be...
+- Yes
+	set {culprit} = "Tom"
+- No
+	set {Tom} = "none"

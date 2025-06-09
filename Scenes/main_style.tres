@@ -60,7 +60,11 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_euixv"]
 script = ExtResource("1_b4lft")
 scene = ExtResource("7_omo6p")
-overrides = {}
+overrides = {
+"sounds_focus": "\"\"",
+"sounds_hover": "\"res://Assets/SFX/hover_sfx.mp3\"",
+"sounds_pressed": "\"res://Assets/SFX/pressed_sfx.mp3\""
+}
 
 [sub_resource type="Resource" id="Resource_pdjiu"]
 script = ExtResource("1_b4lft")
@@ -107,4 +111,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_b4lft")]([])
-metadata/_latest_layer = "10"
+metadata/_latest_layer = "15"

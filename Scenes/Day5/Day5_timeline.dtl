@@ -3,6 +3,7 @@
 [signal arg="start_day"]
 [signal arg="day"]
 if {tam_sus} <= 1.0:
+	[music path="res://Assets/SFX/morning_ambiance.wav" channel="1" fade="0.5" volume="-10.0"]
 	join Ace center [animation="Fade In Up" wait="true"]
 	Ace: ...
 	Ay! Ace you scared me!
@@ -38,14 +39,20 @@ if {tam_sus} <= 1.0:
 	Ace: Today is the day we find out the truth. For my father, and for Tam.
 	update Ace right [move_time="0.3"]
 	join TamBai left [animation="Slide In Left" wait="true"]
+	update TamBai [extra_data="set face/angry"]
+	update Ace [extra_data="set face/avoidant"]
 	TamBai: Hoy, what’s all this about me huh?
 	Tam?!
 	Ace: ...
 	TamBai: Ace, I told you it’s bad to sneak out didn’t I?
 	Ace: I know.. But-
+	update TamBai [extra_data="set face/happy"]
+	update TamBai
 	TamBai: Either way it doesn’t matter. , I’m not here for coke today, just to let you know.
+	update Ace [extra_data="set face/neutral"]
 	TamBai: I mentioned that the truth will be known soon enough, so here it is.
 	join Jan center [animation="Fade In Down" wait="true"]
+	update Jan [extra_data="set face/sleepy"]
 	Jan: Hah.... ha...
 	Manong Jan, you brought him over?
 	TamBai: He was sleeping all day yesterday, and now that he’s awake, we’ll all finally get answers out of him.
@@ -92,6 +99,7 @@ if {tam_sus} <= 1.0:
 	Ace: Please see through everything, please save us.
 	Ace: Find the true culprit.
 else:
+	[music path="res://Assets/SFX/morning_ambiance.wav" channel="1" fade="0.5" volume="-10.0"]
 	...
 	Sure is quiet today…
 	Where are my regulars?
@@ -99,9 +107,12 @@ else:
 	[signal arg="null"]
 	[wait time="1.0"]
 	[signal arg="night"]
+	[music path="res://Assets/SFX/night_ambiance.wav" channel="1" fade="0.5" volume="-10.0"]
 	[wait time="1.0"]
 	join Ace right
 	join TamBai left
+	update Ace [extra_data="set face/avoidant"]
+	update TamBai [extra_data="set face/worried"]
 	Ace: This just isn't right, Tam.
 	TamBai: What matters is that you're safe, Ace. I promised— I promised.
 	Ace: So what, we're just going to leave?

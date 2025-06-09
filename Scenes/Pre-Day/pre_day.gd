@@ -16,13 +16,11 @@ func _on_dialogic_signal(argument: String):
 	if argument == "end_day":
 		area.visible = true
 		start_btn.visible = true
-	elif argument == "end_d5":
+	elif argument == "end_d5" && Dialogic.VAR.tam_sus <= 1:
 			const w_tom = preload("res://Assets/Items/recbook_tom.png")	
 			notes.texture = w_tom
 			area.visible = true
 			start_btn.visible = true
-		
-
 
 func _on_tom_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	pass # Replace with function body.

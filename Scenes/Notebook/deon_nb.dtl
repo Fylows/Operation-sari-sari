@@ -4,19 +4,42 @@ if {day} == 1:
 	Matagal na siyang nakatira dito, at madaldal din.
 	If its information you're after, Deon has the answers.
 if {day} == 2:
-	I think Deon might know something.
-	Yesterday, after buying some candy, he dropped bits of information about night lurkers and cold blooded murders.
-	Not unusual in today's world, but definitely unusual in our town.
-if {day} == 3:
-	Deon might drop more chika today.
-	I need to take note of that chikadora.
 	if {day_end} == true:
+		Its a shame Deon didn't show up today
 	else:
+		I think Deon might know something.
+		Yesterday, after buying some candy, he dropped bits of information about night lurkers and cold blooded murders.
+		Not unusual in today's world, but definitely unusual in our town.
+if {day} == 3:
+	if {day_end} == true:
+		jump deon_arrest
+	else:
+	Deon might drop more chika today.
+	I need to take note of whatever comes out of that chikadora's mouth.
 
 if {day} == 4:
 	if {day_end} == true:
+		jump deon_arrest
 	else:
-		
+		Yesterday Deon bought a 3-in-1 packet while dropping some bombshells about Manong Jan. They know a lot, but how?
+
 if {day} == 5:
 	if {day_end} == true:
+		jump deon_arrest
 	else:
+		Last day... I hope I can get some answers form Deon.
+label deon_arrest (arrest)
+Deon Cey.
+if {deon_sus} > 1:
+	Are they the culprit?
+	- Yes
+		Yes, they know too much.
+		I'm sure they were involved.
+		set {culprit} = "Deon"
+	- No
+		No, I don think so.
+		Chikadora lang siya, 'di naman iligal yun.
+		set {culprit} = "none"
+else:
+	He's not particularly suspicious.
+[end_timeline]

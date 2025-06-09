@@ -4,17 +4,46 @@ if {day} == 1:
 	Nakatrabaho ko siya dati, when I was still Tom's secretary.
 	He's a power tripper.
 if {day} == 2:
-	I didnt see Koopa yesterday.
-if {day} == 3:
-	Agrh.
-	That was probably Tom knocking, so Koopa might be here too.
 	if {day_end} == true:
+		I didnt see Koopa Yesterday.
 	else:
+		Thank God I didnt see Koopa today.
+
+if {day} == 3:
+	if {day_end} == true:
+		jump koopa_arrest
+	else:
+		Agrh.
+		That was probably Tom knocking, so Koopa might be here too.
 
 if {day} == 4:
 	if {day_end} == true:
+		jump koopa_arrest
 	else:
-		
+		Koopa decided to drop by yesterday.
+		He also revealed what he knew about the case.
+		if {tam_sus} == 7 || {tam_sus} == 6 || {tam_sus} == 3 || {tam_sus} == 2:
+			But he had to leave early.
+		else:
+			Something about Tam being involved?
+			I can't believe it.
+
 if {day} == 5:
 	if {day_end} == true:
+		jump koopa_arrest
 	else:
+		I just hope I don't see him today
+[end_timeline]
+
+label koopa_arrest (arrest)
+Koopa L.
+Is he guilty of a crime, besides his terrible name?
+- Yes
+	Yes, he's a powertripper and a creep.
+	I'm sure he had bad blood with Ace's father.
+	set {culprit} = "Koopa"
+- No
+	No, it's not right.
+	He's just a creep.
+	set {culprit} = "none"
+[end_timeline]

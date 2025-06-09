@@ -18,15 +18,18 @@ Tom_Boyako: Wait , what’s with that look on your face?
 Tom…
 Tom_Boyako: Don’t tell me…
 # point gun at tom
+update Tom_Boyako [extra_data="set face/evil"]
 Tom_Boyako: You’d really think you’d get away with arresting me??
 Tom_Boyako: HAHAHHAHA you IDIOT!
 ?!
 Tom_Boyako: Oh what an interesting development! I chose YOU because YOU are the one EASIEST to manipulate!
 Tom_Boyako: Choosing you because you’re familiar with the town? What a load of bull! If you REALLY were familiar, then it wouldn’t have taken you five days whole to find out about all this!
+update Tom_Boyako [extra_data="set face/scared"]
 Tom_Boyako: Hell I would have given Deon this operation if that’s what I really wanted AHAHAH!
 So that means I-
 Tom_Boyako: Shut your mouth.
 Tom_Boyako: What kind of person do you think you are, that you’re able to talk back to me?
+update Tom_Boyako [extra_data="set face/annoyed"]
 Tom_Boyako: I don’t even let Koopa say anything, let alone an idiot who almost arrested the person I was framing!
 Tom_Boyako: Yes, so I killed, Ace’s father, yes I pretended to be Jan Satabi on that night.
 Tom_Boyako: Yes, I did it all so I can take control of this town?
@@ -35,6 +38,7 @@ I-
 Tom_Boyako: ?!
 Won’t do anything…
 # #puts gun away
+update Tom_Boyako [extra_data="set face/evil"]
 Tom_Boyako: Exactly. So lower your head.
 I won’t do anything… on my own.
 Tom_Boyako: Huh?!
@@ -43,8 +47,14 @@ But did you think of confessing to entire town perhaps?
 # #shock tom
 Tom_Boyako: You…
 Tom_Boyako: BASTARDS!!
+update Tom_Boyako [extra_data="set face/scared"]
 TamBai: It’s over Tom, your plan to end us is now over.
 "Deon Cey": You thought  was an easy target, but you were wrong.
 "Deon Cey": If there’s anything they value above all, it’s making the people in this town happy.
 Ace: Tom, give it up. I’ll never forgive you for what you did to us, my family.
 Tom_Boyako: THIS WONT END HERE!
+leave Tom_Boyako [animation="Fade Out" length="0.0"]
+[background fade="0.0"]
+[sound path="res://Assets/SFX/9mm-pistol-shot-6349.mp3" volume="-5.0"]
+[wait time="2.0"]
+[signal arg="reset"]

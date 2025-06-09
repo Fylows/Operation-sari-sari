@@ -39,6 +39,7 @@ directories/dtl_directory={
 "Day4_timeline": "res://Scenes/Day4/Day4_timeline.dtl",
 "Day5_timeline": "res://Scenes/Day5/Day5_timeline.dtl",
 "ace_nb": "res://Scenes/Notebook/ace_nb.dtl",
+"arrest_day_end_timeline": "res://Scenes/Pre-Day/arrest_day_end_timeline.dtl",
 "deon_nb": "res://Scenes/Notebook/deon_nb.dtl",
 "ed1_timeline": "res://Scenes/Endings/ed1_timeline.dtl",
 "ed2_timeline": "res://Scenes/Endings/ed2_timeline.dtl",
@@ -53,7 +54,7 @@ layout/style_list=["res://Scenes/main_style.tres"]
 layout/default_style="res://Scenes/Day0/Day_0_Style.tres"
 variables={
 "culprit": "none",
-"day": 5,
+"day": 0,
 "day_end": false,
 "deon_sus": 0,
 "ed": 0,

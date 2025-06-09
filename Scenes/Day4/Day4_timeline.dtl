@@ -2,6 +2,7 @@
 [background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" fade="0.0"]
 [signal arg="start_day"]
 [signal arg="day"]
+[music path="res://Assets/SFX/morning_ambiance.wav" channel="1" fade="0.5" volume="-10.0"]
 Everyday seems to get more and more insane…
 Tam sure is late today…
 I sure hope Manong Jan is ok too…
@@ -23,7 +24,6 @@ TamBai: …I was just joking, jeez. What is it?
 [b][i]Ahem.[/i][/b] Sorry about that.
 I just… well. I heard from someone that I could talk to you about…
 …[REDACTED].
-TamBai: Oh... and who did you hear that from?
 if {tam_sus} > 3.0:
 	update TamBai [extra_data="set face/confused"]
 	# Update Tam's expression here to a dark expression
@@ -133,7 +133,7 @@ if {tam_sus} < 3.0:
 	Tam.
 	TamBai: Hm?
 	TamBai: I still want my answers.
-	TamBai: Tsk. , don't poke your nose where it doesn't belong.
+	TamBai: Tsk., don't poke your nose where it doesn't belong.
 	Hey, I just want to know what happened to—
 	TamBai: Leave it.
 	Look, I—
@@ -147,6 +147,4 @@ if {tam_sus} < 3.0:
 	TamBai: You'll get your answers. Soon enough.
 	leave TamBai
 [signal arg="end_day"]
-set {day} += 1.0
 set {day_end} = true
--  | [if {culprit} == "aa"]

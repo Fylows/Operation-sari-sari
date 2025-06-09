@@ -2,6 +2,7 @@
 [background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" fade="0.0"]
 [signal arg="start_day"]
 [signal arg="day"]
+[music path="res://Assets/SFX/morning_ambiance.wav" channel="1" fade="0.5" volume="-10.0"]
 join Tom_Boyako center
 Tom_Boyako: Hi Mari! Just checking in on the progress before you open shop!
 Ah Tom, what brings you here today?
@@ -16,6 +17,7 @@ Tom_Boyako: Just do your best, ok? I trust your decisions.
 Tom_Boyako: For the sake of the town.
 leave Tom_Boyako
 label Time passes (evening)
+[music path="res://Assets/SFX/night_ambiance.wav" channel="1" fade="0.5" volume="-10.0"]
 [b] Time passes... [/b]
 [signal arg="night"]
 [wait time="2.0"]
@@ -32,48 +34,52 @@ I didn’t say anything like that. And besides, the closest I’ve gotten is–
 Koopa: Save it for later. I think we have a lead.
 ?
 Guess who I saw lurking around last night?
-join Jan center
-update Koopa
-Good morning, boss.
+update Koopa left [move_time="0.15" move_ease="in" move_trans="quint"]
+join Jan right
+Jan: Good morning, boss.
 Jan: M… Ma…
 Marlboro nanaman ba?
 Jan: Mhmm
 - Tell Jan to go away
-	Pwedeng mamaya na Boss? we're having a discussion here.
+	Pwedeng mamaya na Boss? We're having a discussion here.
 	Jan: Hngg...
-	update Jan
-	update Koopa
+	update Jan leftmost [move_time="0.1" move_ease="in" move_trans="quint"]
+	update Koopa center [move_time="0.15" move_ease="in" move_trans="quint"]
 	Koopa: God, what does it take to get some privacy here.
 	Koopa: As I was saying…
-	That kid who hangs out with Ace?
+	Koopa: That kid who hangs out with Ace?
 	Who– Tam?!
-	Yes, Tam. Right. He’s trouble, Mari. I tell you.
-	Sources tell me that he’s the leader of [REDACTED], and is somehow involved with the case.
+	Koopa: Yes, Tam. Right. He’s trouble, Mari. I tell you.
+	Koopa: Sources tell me that he’s the leader of [REDACTED], and is somehow involved with the case.
 	Tam… that doesn’t sound right...
 	Sure he didn’t finish college, but I don’t think Tam is that kind of person…
-	Just telling you Mari, its hard to trust anyone nowadays.
-	Anyways, I have to go.
-	See you soon, Mari.
+	Koopa: Just telling you Mari, its hard to trust anyone nowadays.
+	Koopa: Anyways, I have to go.
+	Koopa: See you soon, Mari.
+	set {tam_sus} += 2.0
+	leave Koopa
+	jump tam
 - Give him a cigarette
-	set {jan_sus} += 1.0
-	set {tam_sus} += 1.0
-	set {deon_sus} += 1.0
+	set {jan_sus} += 2.0
+	set {deon_sus} += 2.0
 	Koopa: Ahem. I think I must take my leave, I’ll see you soon, Mari.
 	Koopa: And Jan, don’t drink too much please, I don’t want to keep you in custody again [i]like last time[i].
+	leave Koopa
+	update Jan center [move_time="0.15" move_ease="in" move_trans="quint"]
 	Ahem, boss, can I ask…
 	The last time you were here, you mentioned something about Ace’s father…
 	Jan: Ah… hahaha...
 	…did you know him?
 	Jan: Kasama ko ‘yon… noon…
 	…
-	Too proud… look where it got him…
+	Jan: Too proud… look where it got him…
 	?!
-	join "Deon Cey" center
-	update Jan
-	"Deon Cey": Hi mga mamsh, Good morning ulet!
+	update Jan left [move_time="0.15" move_ease="in" move_trans="quint"]
+	join "Deon Cey" right
+	"Deon Cey": Hi mga mamsh, Good evening ulet!
 	"Deon Cey": Wow, manong over sa lung cancer ah
-	"Deon Cey": Already out for a smoke this early?
-	Buti di ka pa natetegi
+	"Deon Cey": Buti di ka pa natetegi
+	update Jan [animation="Shake X"]
 	Jan: ?!
 	"Deon Cey": Charez lang oh di mabiro si adik
 	"Deon Cey": Anyways, isang 3-in-1 for me!
@@ -83,39 +89,42 @@ Jan: Mhmm
 	Ah, si Manong Jan kasi…
 	he mentioned knowing Ace’s father.
 	"Deon Cey": Ay sus! Marites ka lang pala. Aba oo! it was no secret that they used to work together.
-	[font_size=20]And… it was also no secret that they were in [/b][REDACTED][b], and Jan got kicked out because of… unsavory behavior.[/font_size]
+	"Deon Cey": [font_size=20]And… it was also no secret that they were in [b][REDACTED][/b], and Jan got kicked out because of… unsavory behavior.[/font_size]
 	[font_size=20] [b][REDACTED]?[/b] Isn’t that… [/font_size]
-	An activist group? Yeah…
+	"Deon Cey": An activist group? Yeah…
+	[wait time="1.0"]
 	…wh–
-	Nasaan na ba ang kape ko, maem?
-	Over sa tagal ah!
+	"Deon Cey": Nasaan na ba ang kape ko, maem?
+	"Deon Cey": Over sa tagal ah!
 	I wasn’t–
 	"Deon Cey": Hey. Enough with the questions. Chika will have to wait, okay? Kape is now.
-	label QTE Kape (QTE Kape)
+	[signal arg="qte1_d3"]
+	[wait time="5.0"]
 	if {qte} == false:
-		Hayst... wag na nga mamshie over ka sa think!
+		"Deon Cey": Hayst... wag na nga mamshie over ka sa think!
 	else:
 		"Deon Cey": Thanks! luv u mwa!
-	set {qte} = false
 	"Deon Cey": Anyway, nabalitaan ko dumaan si Ms. Boyako kanina?
 	Ah, yeah. Wait, that was only a few minutes ago. What do you mean, “nabalitaan”?
-	Word of mouth flies fast girlypop!
-	But Ms. Boyako huh…
-	She’s been out and about ever since, the [i]you know what[/i] incident.
-	Well I guess that makes sense, the activist party is out of the picture…
-	And may plus points din siya if she happens to find the culprit to this all.
+	"Deon Cey": Word of mouth flies fast girlypop!
+	"Deon Cey": But Ms. Boyako huh…
+	"Deon Cey": She’s been out and about ever since, the [i]you know what[/i] incident.
+	"Deon Cey": Well I guess that makes sense, the activist party is out of the picture…
+	"Deon Cey": And may plus points din siya if she happens to find the culprit to this all.
 	Thats...
 	How do you know so much about [b][REDACTED][/b] anyway?
-	Like I said, enough with the questions.
+	"Deon Cey": Like I said, enough with the questions.
 	...
-	Si Tam tanungin mo.
-	Bounce na’ko, madam. Kape, here I go go go!
+	"Deon Cey": Si Tam tanungin mo.
+	"Deon Cey": Bounce na’ko, madam. Kape, here I go go go!
 	Deon, wait-
 	leave "Deon Cey"
+	update Jan center [move_time="0.1" move_ease="in" move_trans="quint"]
 	It always surprises me how much Deon knows…
+	set {qte} = false
+label tam (tam)
 Tam again huh?
-He has connections to [b][REDACTED] [/b]?
-update Jan
+update Jan center [move_time="0.1" move_ease="in" move_trans="quint"]
 Jan: HA! Si Tam… lokong bata ‘yan…
 Tam again huh?
 Tam has connections to [b][REDACTED][/b] ?
@@ -138,20 +147,23 @@ Jan: What? … No. I– I was…
 …
 I was passed out cold, in some godforsaken corner of this town.
 Do you remember anything that happened that night?
+update Jan [extra_data="set face/crazy"]
 Jan: No! No… but it wasn’t me, I swear– I– I couldn’t have… not me… not me–
 Jan, calm down—
 Jan: It wasn’t me! It wasn’t me, wasn’t me, wasn’t me–
 Jan–
 Jan: But it might as well have been me, right? I– he was my friend! And look where that got him…
 Jan… you’re not making sense.
+update Jan [extra_data="set face/scared"]
 Jan: You think I wanted this– that I wanted him dead? He– he was my only friend, and I just– I can’t…
 Jan: Tam said– Tam said there was a call, that it was me. But it couldn’t have been me– or was it? I don’t– I don’t know…
 Jan: Help me– PLEASE! It wasn’t me! Wasn’t me, wasn’t me, w–
-- Fight back
-	set {tam_sus} += 2.0
-	[i] I gave manong Jan a good slap [/i]
+[i] Jan grabs my neck [/i]
+- Resist
+	set {tam_sus} += 4.0
 	Manong– sigh You’re clearly not well. But I believe you.
 	Jan: …
+	update Jan [extra_data="set face/Sleepy"]
 	Jan: …you do?
 	Yes. Now please, calm down.
 	I’ll let this slide for now, but you’re not completely off the hook. I’ll take your testimony into account.
@@ -162,22 +174,30 @@ Jan: Help me– PLEASE! It wasn’t me! Wasn’t me, wasn’t me, w–
 	Jan: Magaling magtago yung bata, but he’s involved… hah ha.
 	Involved in what way..?
 	Jan: He’s.. hah… cough
+	update Jan left [move_time="0.1" move_ease="in" move_trans="quint"]
+	join TamBai right
+	update TamBai [extra_data="set face/Angry"]
 	Jan: [b] cough COUGH COUGH [/b]
-	Manong!  what did you do?!
+	TamBai: Manong! [b]What did you do?![/b]
 	Tam! You-
-	I said what did you do, ?!
+	TamBai: [b]I said what did you do?![/b]
 	Nothing! I-
 	…He started grabbing me so I just-
-	Manong Jan is old ! You know he has weak lungs!
-	He can’t handle rough activity like he used to, you should know that!
+	TamBai: [b]Manong Jan is old ! You know he has weak lungs![/b]
+	TamBai: [b]He can’t handle rough activity like he used to, you should know that![/b]
 	Tam wait! I have somethi-
-	Save it. I’m taking Manong Jan with me to help him recover.
-	Just stay put there, I’ll handle it myself…
-- Dont fight back
-	set {jan_sus} += 2.0
-	Jan: PLESAE FORGIVE ME. I JUST WANTED HIM TO LEAVE AND BE SAFE. PLEASE PLEASE PLEASE PELAS PELASEPLASEPLS
+	TamBai: Save it. I’m taking Manong Jan with me to help him recover.
+	TamBai: Just stay put there, I’ll handle it myself…
+	leave --All--
+- Try to talk to him
+	set {jan_sus} += 4.0
+	Jan: [b]PLESAE FORGIVE ME. I JUST WANTED HIM TO LEAVE AND BE SAFE. PLEASE PLEASE PLEASE PELAS PELASEPLASEPLS[/b]
+	[style]
+	[background arg="res://Assets/Transitions/choke.png" fade="0.5"]
+	[wait time="3.0"]
+	[style name="main_style"]
+	join TamBai center
 	…What… Happened?
-	join TamBai
 	TamBai: Manong Jan had another one of his crash outs, and this time, you were the target.
 	What happened, is he okay?
 	TamBai: Yeah your buddy Koopa dragged him over to the barangay.
@@ -185,10 +205,11 @@ Jan: Help me– PLEASE! It wasn’t me! Wasn’t me, wasn’t me, w–
 	I dont really know… One second he was shouting “Im sorry” and the next he was choking me.
 	TamBai: Yeah… I wonder if… that also happened with…
 	With?
-	Oh its nothing. Never mind…
-	TamBai: I… have to go now… have a good night .
+	TamBai: Oh its nothing. Never mind…
+	TamBai: I… have to go now… have  good night .
+	leave --All--
+set {qte} = false
 label end (end)
 Tam…
 [signal arg="end_day"]
-set {day} += 1.0
 set {day_end} = true

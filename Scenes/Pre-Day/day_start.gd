@@ -10,16 +10,19 @@ func _on_pressed() -> void:
 	var culprit = Dialogic.VAR.culprit
 	if end == 1:
 		end = 0
-		if day == "6":
+		if day == "6" && culprit == "none":
 			Dialogic.VAR.ed = 1
-		if day == "6" || culprit != "none":
-			if culprit == "Ace":
+			get_tree().change_scene_to_file(	"res://Scenes/Endings/endings.tscn")
+		elif day == "6" || culprit != "none":
+			Dialogic.VAR.ed = 1
+			if culprit == "Tam":
 				Dialogic.VAR.ed = 2
 			elif culprit == "Tom":
 				Dialogic.VAR.ed = 3
 			get_tree().change_scene_to_file(	"res://Scenes/Endings/endings.tscn")
 		else:
 			Dialogic.VAR.day_end = false
+			Dialogic.VAR.day += 1
 			get_tree().change_scene_to_file("res://Scenes/Day"+day+"/Day"+day+".tscn")
 		
 	else:

@@ -4,19 +4,48 @@ if {day} == 1:
 	Ever since I arrived in this town, he's always been close with Ace's family.
 	For a while I thought they were siblings.
 if {day} == 2:
-	Yesterday, Tam dropped by in the morning with Ace, as if it was routine.
-	Bought his usual bottle of coke, and one for Ace.
-	if {day_end} == 1:
-		
-if {day} == 3:
-	I'm sure Tam knows something.
 	if {day_end} == true:
+		Bought his usual Coke for him and Ace, but he seemed on edge with Manong Jan around.
+		if {tam_sus} == 1:
+			They had a cryptic conversation, couldn't catch much besides Tam asking Manong Jan to leave.
+		Tam definitely knows something.
+		else:
+			We both chose to not really pay attention to it, Jan just told Manong Jan to leave as I got their drinks.
 	else:
+		Yesterday, Tam dropped by in the morning with Ace, as if it was routine.
+		Bought his usual bottle of coke, and one for Ace.
 
+if {day} == 3:
+	if {day_end} == true:
+		jump tam_arrest
+	else:
+		I'm sure Tam knows something.
 if {day} == 4:
 	if {day_end} == true:
+		jump tam_arrest
 	else:
-		
+		Tam...
+		What is your role in all of this?
 if {day} == 5:
 	if {day_end} == true:
+		jump tam_arrest
 	else:
+		Tam.
+		Last day, let's get to the bottom of this rodeo
+[end_timeline]
+label tam_arrest (arrest)
+Tam Bai.
+if {tam_sus} > 1:
+	Should I arrest him?
+	- Yes
+		Yes, they know too much.
+		I'm sure they were involved.
+		set {culprit} = "Tam"
+	- No
+		No, it's not right.
+		Tam is Ace's other half, he won't do something like that
+		set {culprit} = "none"
+else:
+	I'm second guessing putting Tam here.
+	He's not really suspicious.
+[end_timeline]

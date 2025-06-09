@@ -5,21 +5,31 @@ if {day} == 1:
 	Lagi rin siyang tahimik at mahiyain.
 	She didn't cry or said anything in her dad's funeral.
 if {day} == 2:
-	Nothing out of the ordinary happened yesterday with Ace.
-	They were with Tam as expected, and they went to play.
-	Ace was, as usual, quiet.
 	if {day_end} == true:
-		Didn't say much beyond a few hellos, but looked unnerved when Junjun's mentioned her father's death.
+		Didn't say much beyond a few hellos, but looked unnerved when Junjun mentioned her father's death.
+	else:
+		Nothing out of the ordinary happened yesterday with Ace.
+		They were with Tam as expected, and they went to play.
+		Ace was, as usual, quiet.
 if {day} == 3:
 	if {tam_sus} == 1:
-	I hope I can talk to Ace today.
 	if {day_end} == true:
+		jump ace_arrest
 	else:
-
+		I hope I can talk to Ace today.
 if {day} == 4:
 	if {day_end} == true:
+		jump ace_arrest
 	else:
-		
+		I wonder how Ace has been holding up...
+
 if {day} == 5:
 	if {day_end} == true:
+		jump ace_arrest
 	else:
+		Last day Ace, we'll get to the bottom of this today.
+[end_timeline]
+label ace_arrest (arrest)
+Poor Ace, I'm sorry you had to go through this.
+We'll find justice for your father, I promise.
+[end_timeline]

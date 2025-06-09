@@ -2,6 +2,7 @@
 [background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" fade="0.0"]
 [signal arg="day"]
 [signal arg="start_day"]
+[music path="res://Assets/SFX/morning_ambiance.wav" channel="1" fade="0.5" volume="-10.0"]
 [wait time="2.0"]
 join Jan center
 Jan: Heh heh…
@@ -23,10 +24,11 @@ if {qte} == false:
 	set {jan_sus} += 1.0
 else:
 	Here’s your cigarettes..
-	Jan: Salamang neng.
+	Jan: Salamat neng.
 set {qte} = false
-leave 
-join TamBai center
+leave Jan
+join TamBai left
+join Ace right
 TamBai: Hoy Mari! I thought you quit smoking long ago?
 It’s not for me, idiot. Anyway, how long have you been here?
 TamBai: Long enough to see you stare down that box of Marlboro like you wanna make out with it.
@@ -34,36 +36,31 @@ Like. I. Said. It’s not for me.
 I see you’ve got Ace with you today again. Have you two always been this close?
 TamBai: Huh? Yeah of course.. Why do you ask?
 TamBai: Isn’t that right, Ace?
-leave TamBai
-join Ace center
 Ace: …yeah sure.
 Oh! Feel like talking today Ace? Feeling better perhaps?
 [i]Alright this is good they seem willing to talk even if only a little bit.[/i]
 [i]Now if I can just get some info-[/i]
 leave Ace
-join  center
-Ace huh… heh heh..
-Ha..
-leave 
-join TamBai center
+join Jan right
+Jan: Ace huh… heh heh..
+update TamBai [extra_data="set face/worried"]
+Jan: Ha..
 TamBai: Mari! Two cokes again please!
 Wait! Tam, I’ll get you in a second.
 Mr. Satabi what were you saying again.
-leave TamBai
-join  center
-no one helped..
-haha..
-the blood…
-father…
+Jan: no one helped..
+Jan: haha..
+Jan: the blood…
+Jan: father…
 I’m gonna need you to speak more clearly.
-leave 
-join TamBai center
-TamBai: Mari, our Cokes please.
+TamBai: Our cokes please.
 - Tell them to wait.
 	set {tam_sus} += 1.0
 	Tam, hold on.
 	Jan: Ace.. tried to-
-	TamBai: Mari. Give us the drinks. Now.
+	update TamBai [extra_data="set face/angry"]
+	update Ace [extra_data="set face/worried"]
+	TamBai: Give us the drinks. [b]Now![/b]
 	?!
 	…
 	One second..
@@ -74,9 +71,13 @@ TamBai: Mari, our Cokes please.
 	TamBai: None…. Business… get involved…
 	[i]I can’t make out what he’s saying..[/i]
 	TamBai: …. Just leave.
-	heh… suit yourself.. haha..
+	Jan: heh… suit yourself.. haha..
+	leave Jan
+	join Ace right
 	[i]Maybe he might have seen something…[/i]
 - Give their cokes.
+	leave Jan
+	join Ace right
 	Alright! Tam, I’m back with your drinks. What was Mr. Satabi even saying?
 	TamBai: Nothing to worry about, told him to piss off na, he's just being a bum as usual.
 	TamBai: Palagi ko nalang ‘yan nakikita sa labas, pagala-gala kahit gabi na.
@@ -85,65 +86,52 @@ TamBai: Mari, our Cokes please.
 	TamBai: It’s a pain in the ass hanging around here with his stinky face in the area.
 	TamBai: Anyway, the computer shop opens late today, so is it cool if me and Ace hang out here for a while?
 	Stay as long as you like.
+	update TamBai [extra_data="set face/happy"]
+	update Ace [extra_data="set face/neutral"]
 	TamBai: Thanks, Mari. I can always count on you!
+update TamBai [extra_data="set face/happy"]
+update Ace [extra_data="set face/neutral"]
 What was that abo-
 TamBai: Wait, hold on. Is that Junjun I see?
 TamBai: Psst! Jun!!!
-leave TamBai
-join jun center
+leave Ace
+join jun right
 jun: Hello po…
 Hi Jun! What brings you here today?
 jun: Sinigang mix please, for lunch.
 Ah, you guys are cooking Sinigang? Sure thing! Let me get that for you.
-leave 
-join TamBai center
 TamBai: Hey, Jun! Long time no see! I missed yo- IS THAT A CELESTIAL SHOCKED BEANSTALK?!
 TamBai: AND YOU HAVE A MOON BLOSSOM TOO?!
 TamBai: Just how lucky are you?!
-leave TamBai
-join  center
 jun: Oh, I just play this game a lot, it’s a lot easier to play on my Ipad.
-jun: Anyway, Hi Kuya Tam, Hi Ace..
-leave 
-join TamBai center
+jun: Anyway, hi kuya Tam, hi Ace..
 TamBai: What’s up Jun!
 leave TamBai
-join Ace center
+join Ace left
 Ace: Hello Jun..
 Here Jun, your sinigang mix.
-leave Ace
-join  center
 jun: Thank you po!
 Oh yeah Jun one more thing before you go.
 There seems to be a strange man walking around late at night, so be sure not to stay outdoors playing too late!
-leave 
-join Ace center
+update Ace [animation="Shake X"]
 Ace: ?!
-leave Ace
-join  center
 jun: Oh it’s ok, I only play grow a garden anyway.
 jun: I wouldn’t want to end up like Ace’s father…
-leave 
-join Ace center
+update Ace [animation="Shake X"]
 Ace: !!!
 leave Ace
-join TamBai center
+join TamBai left
 TamBai: Jun! Anong oras na, your game–
-leave TamBai
-join  center
 jun: Kuya Tam, you promised pa nga sa dad ni Ace noon na–
-leave 
-join TamBai center
 TamBai: Ok! I think that’s enough! Jun, why don’t you go home already?
 TamBai: I can’t let you overtake my garden, I’m going to get that beanstalk today just you wait!
 TamBai: Anyway, thank you, Mari! But we gotta go.
 TamBai: And if I were you, I’d stop asking questions, because someone might get hurt..
-leave TamBai
+leave --All--
 Huh?
 label end (end)
 [i]What was that?[/i]
 [i]I think I'll close shop for today.[/i]
-set {day} += 1.0
 [signal arg="end_day"]
 set {day_end} = true
 [end_timeline]

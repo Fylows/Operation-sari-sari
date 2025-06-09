@@ -1,4 +1,5 @@
 [style name="main_style"]
+[background arg="res://Assets/Backgrounds/office.png" fade="0.0"]
 if {day}  > 5.0:
 	if {culprit} == "none":
 		join Tom_Boyako center
@@ -9,16 +10,16 @@ if {day}  > 5.0:
 	elif {culprit} != "none":
 		jump ed1_a
 label ed1_a (ed1_a)
-[background fade="0.0"]
 join Tom_Boyako center
 Tom_Boyako: {culprit}? Huh. Not who I expected. But hey, a win’s a win. Good job.
 join Koopa center
 Koopa: Ayan naman pala, . You’ve got some backbone.
-leave --All-- [animation="Fade Out"]
 label ed1_b (ed1_b)
+leave --All-- [animation="Slide Out Right"]
 [background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" fade="0.0"]
 [signal arg="day"]
 [signal arg="start_day"]
+[wait time="2.0"]
 Time to open up shop again.
 [wait time="2.0"]
 join TamBai center [extra_data="set face/worried"]
@@ -28,6 +29,21 @@ TamBai: Ace, is dead.
 ?!
 TamBai: Yes, they were killed just last night.
 Last night? But I-
-Ace: Enough , I tried to warn you, I really did, but you just wouldn’t listen.
-Ace: If only you listened…
-Ace: If only…
+TamBai: Enough , I tried to warn you, I really did, but you just wouldn’t listen.
+TamBai: If only you listened…
+TamBai: If only…
+leave --All--
+[signal arg="end_day"]
+[signal arg="null"]
+It’s been some time since that incident, the incident that forever changed my life…
+Shortly after, Tom commended me for my heroic effort, and offered me a generous amount of money, and a house and lot far away from that town as a reward.
+Tom ended up running for Mayor, and even won the position.
+She now controls the town, and has made some great changes since then, not that it concerns me anymore of course.
+In a way, we both got our fresh start.
+The town was built anew, and I was able to leave that lower class life behind.
+That lower class life... That I remember so fondly.
+The people showing up everyday, and their smiling faces to the little service I can give them.
+I should be happy… but I feel oddly empty...
+Was I mistaken all this time?
+[wait time="2.0"]
+[signal arg="reset"]
