@@ -192,10 +192,13 @@ Jan: Help me– PLEASE! It wasn’t me! Wasn’t me, wasn’t me, w–
 - Try to talk to him
 	set {jan_sus} += 4.0
 	Jan: [b]PLESAE FORGIVE ME. I JUST WANTED HIM TO LEAVE AND BE SAFE. PLEASE PLEASE PLEASE PELAS PELASEPLASEPLS[/b]
+	leave --All-- [animation="Fade Out" length="0.0"]
 	[style]
 	[background arg="res://Assets/Transitions/choke.png" fade="0.5"]
 	[wait time="3.0"]
 	[style name="main_style"]
+	[background scene="res://Scenes/Animated_BG/AnimatedBG.tscn" arg="res://Assets/Transitions/choke.png" fade="0.5"]
+	[signal arg="night"]
 	join TamBai center
 	…What… Happened?
 	TamBai: Manong Jan had another one of his crash outs, and this time, you were the target.
