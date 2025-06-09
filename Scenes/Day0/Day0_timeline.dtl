@@ -1,14 +1,11 @@
 [style name="main_style"]
-[background arg="res://Assets/Backgrounds/mqdefault.jpg" fade="0.0"]
-join Ace center [extra_data="set face/happy"]
-Ace: Skibibdi toiler
 If I were to have any reason to work, it would be to help my community.
 Helping out those in need, in times of need, nothing brings me more joy than that.
 Seeing the smiles on people’s faces, and being able to ease some of their burdens, it makes me whole.
 I may be humble, and my work may be humble, but I believe even a little help can go a long way.
 Humble, huh...
 yeah, well I guess my sari-sari store was humble, it was humble until everything changed, that very week.
-[background arg="res://Assets/Backgrounds/temp_base_bg.jpg" fade="3.0"]
+[background arg="res://Assets/Backgrounds/office.png" fade="3.0"]
 [wait time="2.0"]
 join Tom_Boyako center [animation="Slide In Left" length="0.8" z_index="1"]
 [wait_input]
