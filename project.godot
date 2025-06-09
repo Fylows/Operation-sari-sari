@@ -54,7 +54,7 @@ layout/style_list=["res://Scenes/main_style.tres"]
 layout/default_style="res://Scenes/Day0/Day_0_Style.tres"
 variables={
 "culprit": "none",
-"day": 0,
+"day": 5,
 "day_end": false,
 "deon_sus": 0,
 "ed": 0,

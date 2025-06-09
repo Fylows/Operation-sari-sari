@@ -28,7 +28,7 @@ if {day} == 4:
 			Something about Tam being involved?
 			I can't believe it.
 
-if {day} == 5:
+if {day} == 6.0:
 	if {day_end} == true:
 		jump koopa_arrest
 	else:

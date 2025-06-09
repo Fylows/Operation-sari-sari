@@ -35,7 +35,7 @@ if {day} == 4:
 			He got a hold of me and made me pass out.
 			Why would he do that?
 			What does he know?
-if {day} == 5:
+if {day} == 6.0:
 	if {day_end} == true:
 		jump jan_arrest
 	else:
@@ -44,7 +44,7 @@ if {day} == 5:
 [end_timeline]
 label jan_arrest (arrest)
 Jan Satabi.
-if {jan_sus} > 3:
+if {jan_sus} > 3.0:
 	Could he really do something like that...?
 	- Yes
 		Yes, it checks out with his impulsive and aggresive thoughts

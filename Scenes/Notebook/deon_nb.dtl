@@ -23,7 +23,7 @@ if {day} == 4:
 	else:
 		Yesterday Deon bought a 3-in-1 packet while dropping some bombshells about Manong Jan. They know a lot, but how?
 
-if {day} == 5:
+if {day} == 6.0:
 	if {day_end} == true:
 		jump deon_arrest
 	else:

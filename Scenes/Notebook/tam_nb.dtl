@@ -26,7 +26,7 @@ if {day} == 4:
 	else:
 		Tam...
 		What is your role in all of this?
-if {day} == 5:
+if {day} == 6.0:
 	if {day_end} == true:
 		jump tam_arrest
 	else:

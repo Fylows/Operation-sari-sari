@@ -23,7 +23,7 @@ if {day} == 4:
 	else:
 		I wonder how Ace has been holding up...
 
-if {day} == 5:
+if {day} == 6.0:
 	if {day_end} == true:
 		jump ace_arrest
 	else:
